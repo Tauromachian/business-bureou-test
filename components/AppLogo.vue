@@ -1,6 +1,6 @@
 <template>
   <div class="icon-holder">
-    <img v-if="whiteVariant" src="/logo1.png" alt="logo" />
+    <img v-if="whiteVariant" src="/logo2.png" alt="logo" />
     <img v-else src="/logo.png" alt="logo" />
   </div>
 </template>
