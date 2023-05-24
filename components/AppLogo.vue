@@ -1,8 +1,18 @@
 <template>
   <div class="icon-holder">
-    <img src="/logo.png" alt="logo" />
+    <img v-if="whiteVariant" src="/logo1.png" alt="logo" />
+    <img v-else src="/logo.png" alt="logo" />
   </div>
 </template>
+
+<script setup>
+defineProps({
+  whiteVariant: {
+    type: Boolean,
+    default: false,
+  },
+});
+</script>
 
 <style scoped>
 .icon-holder {
