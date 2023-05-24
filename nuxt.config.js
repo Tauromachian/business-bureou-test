@@ -7,11 +7,11 @@ export default defineNuxtConfig({
     },
     moduleOptions: {
       /* nuxt-vuetify module options */
-      treeshaking: true | false,
-      useIconCDN: true | false,
+      treeshaking: true,
+      useIconCDN: false,
       /* vite-plugin-vuetify options */
       styles: true,
-      autoImport: true | false,
+      autoImport: true,
     },
   },
   css: ["~/assets/scss/main.scss"],
