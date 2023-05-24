@@ -1,7 +1,7 @@
 <template>
   <footer class="d-flex flex-column align-center" v-once>
     <AppLogo white-variant></AppLogo>
-    <div>
+    <div class="d-flex gap-5">
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
@@ -10,7 +10,7 @@
         {{ link.text }}
       </NuxtLink>
     </div>
-    <div class="d-flex">
+    <div class="d-flex gap-5">
       <NuxtLink
         v-for="(social, index) in state.socials"
         :key="`link-${index}`"
