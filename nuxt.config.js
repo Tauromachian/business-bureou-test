@@ -3,7 +3,16 @@ export default defineNuxtConfig({
   vuetify: {
     /* vuetify options */
     vuetifyOptions: {
-      // @TODO: list all vuetify options
+      theme: {
+        themes: {
+          light: {
+            colors: {
+              primary: "#FBB660",
+              neutral: "#ffffff",
+            },
+          },
+        },
+      },
     },
     moduleOptions: {
       /* nuxt-vuetify module options */
@@ -12,18 +21,6 @@ export default defineNuxtConfig({
       /* vite-plugin-vuetify options */
       styles: true,
       autoImport: true,
-      vuetifyOptions: {
-        theme: {
-          themes: {
-            light: {
-              colors: {
-                primary: "#FBB660",
-                neutral: "#ffffff",
-              },
-            },
-          },
-        },
-      },
     },
   },
   css: ["~/assets/scss/main.scss"],
