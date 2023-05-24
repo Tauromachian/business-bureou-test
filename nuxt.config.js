@@ -14,4 +14,5 @@ export default defineNuxtConfig({
       autoImport: true | false,
     },
   },
+  css: ["~/assets/scss/main.scss"],
 });
