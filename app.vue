@@ -1,9 +1,13 @@
 <template>
   <VApp>
-    <TheNav></TheNav>
+    <VContainer>
+      <TheNav></TheNav>
+    </VContainer>
     <VMain>
-      <NuxtLink></NuxtLink>
+      <NuxtPage></NuxtPage>
     </VMain>
-    <TheFooter></TheFooter>
+    <VContainer>
+      <TheFooter></TheFooter>
+    </VContainer>
   </VApp>
 </template>
