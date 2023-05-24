@@ -48,4 +48,8 @@ const state = reactive({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+footer {
+  background-color: rgb(var(--v-theme-primary));
+}
+</style>
