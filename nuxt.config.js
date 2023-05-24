@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       treeshaking: true | false,
       useIconCDN: true | false,
       /* vite-plugin-vuetify options */
-      styles: true | "none" | "expose" | "sass",
+      styles: true,
       autoImport: true | false,
     },
   },
