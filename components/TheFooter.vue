@@ -19,7 +19,7 @@
         {{ social.icon }}
       </NuxtLink>
     </div>
-    <div>
+    <div class="mb-5 mt-8">
       <p>
         Privacy policy/This is a sample website - cmsmaster&copy;2022/All rights
         reserved
@@ -51,5 +51,6 @@ const state = reactive({
 <style lang="scss" scoped>
 footer {
   background-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-neutral));
 }
 </style>
