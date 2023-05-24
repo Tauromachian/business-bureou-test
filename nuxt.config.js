@@ -12,6 +12,18 @@ export default defineNuxtConfig({
       /* vite-plugin-vuetify options */
       styles: true,
       autoImport: true,
+      vuetifyOptions: {
+        theme: {
+          themes: {
+            light: {
+              colors: {
+                primary: "#FBB660",
+                neutral: "#ffffff",
+              },
+            },
+          },
+        },
+      },
     },
   },
   css: ["~/assets/scss/main.scss"],
