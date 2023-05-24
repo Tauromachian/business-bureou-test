@@ -1,5 +1,5 @@
 <template>
-  <footer class="d-flex flex-column align-center">
+  <footer class="d-flex flex-column align-center" v-once>
     <div>Kids r Us</div>
     <div>
       <NuxtLink
