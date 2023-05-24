@@ -1,6 +1,6 @@
 <template>
   <header class="d-flex flex-column align-center">
-    <div>Logo</div>
+    <AppLogo></AppLogo>
     <div class="d-flex" v-once>
       <NuxtLink
         v-for="(link, index) in state.links"

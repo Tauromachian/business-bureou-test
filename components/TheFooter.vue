@@ -1,6 +1,6 @@
 <template>
   <footer class="d-flex flex-column align-center" v-once>
-    <div>Kids r Us</div>
+    <AppLogo white-variant></AppLogo>
     <div>
       <NuxtLink
         v-for="(link, index) in state.links"
