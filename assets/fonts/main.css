@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Francois One";
+  src: url("Francois_One/FrancoisOne-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilda Display";
+  src: url("Gilda_Display/GildaDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand/Quicksand-VariableFont_wght.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
