@@ -1,9 +1,9 @@
 <template>
   <VApp>
-    <TheFooter></TheFooter>
+    <TheNav></TheNav>
     <VMain>
       <NuxtLink></NuxtLink>
     </VMain>
-    <TheNav></TheNav>
+    <TheFooter></TheFooter>
   </VApp>
 </template>
