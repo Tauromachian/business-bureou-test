@@ -6,8 +6,6 @@
     <VMain>
       <NuxtPage></NuxtPage>
     </VMain>
-    <VContainer>
-      <TheFooter></TheFooter>
-    </VContainer>
+    <TheFooter></TheFooter>
   </VApp>
 </template>
