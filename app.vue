@@ -1,9 +1,7 @@
 <template>
   <VApp>
     <TheBanner></TheBanner>
-    <VContainer>
-      <TheNav></TheNav>
-    </VContainer>
+    <TheNav></TheNav>
     <VMain>
       <NuxtPage></NuxtPage>
     </VMain>
