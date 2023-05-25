@@ -1,7 +1,7 @@
 <template>
   <header class="d-flex flex-column align-center">
     <AppLogo></AppLogo>
-    <div class="d-flex" v-once>
+    <div class="d-flex gap-5 nav-links" v-once>
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
@@ -39,4 +39,10 @@ const state = reactive({
   ],
 });
 </script>
-<style lang="scss" scoped></style>
+
+<style lang="scss" scoped>
+.nav-links {
+  text-transform: uppercase;
+  font-family: var(--primary-font-family);
+}
+</style>
