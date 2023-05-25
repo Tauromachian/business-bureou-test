@@ -40,9 +40,21 @@
           <VCol md="4" v-for="(product, index) in state.products" :key="index">
             <VCard flat class="mb-4 text-center">
               <VImg :src="product.image" aspect-ratio="1"></VImg>
-              <VCardSubtitle>{{ product.category }}</VCardSubtitle>
-              <VCardTitle>{{ product.name }}</VCardTitle>
-              <VCardText>{{ product.price }}</VCardText>
+              <VCardSubtitle>
+                <h5>
+                  {{ product.category }}
+                </h5>
+              </VCardSubtitle>
+              <VCardTitle
+                ><h4>
+                  {{ product.name }}
+                </h4>
+              </VCardTitle>
+              <VCardText>
+                <h5>
+                  {{ product.price }}
+                </h5>
+              </VCardText>
             </VCard>
           </VCol>
         </VRow>
