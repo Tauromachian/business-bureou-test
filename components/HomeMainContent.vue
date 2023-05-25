@@ -7,7 +7,12 @@
       <!-- Sidebar -->
       <VCol cols="3" class="d-flex flex-column gap-9">
         <div>
-          <VTextField v-model="search" label="Search" solo></VTextField>
+          <VTextField
+            v-model="search"
+            variant="outlined"
+            label="Search"
+            solo
+          ></VTextField>
         </div>
 
         <!-- Categories -->
