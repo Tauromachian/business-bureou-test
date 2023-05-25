@@ -47,6 +47,7 @@
                       class="ml-n4"
                       v-model="bestSeller.stars"
                       color="accent"
+                      density="compact"
                       readonly
                     ></VRating>
                   </VListItemTitle>
