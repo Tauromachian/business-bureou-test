@@ -46,7 +46,7 @@
             <VCard flat class="mb-4 text-center">
               <VImg :src="product.image" aspect-ratio="1"></VImg>
               <VCardSubtitle class="mt-4">
-                <h4>
+                <h4 class="category">
                   {{ product.category }}
                 </h4>
               </VCardSubtitle>
@@ -143,5 +143,9 @@ h3 {
 
 .form-title {
   color: white;
+}
+
+.category {
+  color: rgb(var(--v-theme-accent));
 }
 </style>
