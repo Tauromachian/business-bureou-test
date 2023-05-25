@@ -33,8 +33,8 @@ const state = reactive({
     { text: "Post types", to: "" },
   ],
   storeLinks: [
-    { icon: "heart", to: "" },
-    { icon: "cart", to: "" },
+    { icon: "heart-outline", to: "" },
+    { icon: "cart-outline", to: "" },
     { icon: "magnify", to: "" },
   ],
 });
