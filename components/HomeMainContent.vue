@@ -25,18 +25,15 @@
         <!-- Best Sellers -->
         <div>
           <h2 class="mb-0">Best Sellers</h2>
-          <VCard class="mt-0 border-dotted" variant="outlined" flat>
+          <VCard class="mt-0 border-dotted w-100" variant="outlined" flat>
             <VCardText>
               <v-list class="d-flex flex-column gap-6">
                 <v-list-item
                   v-for="(bestSeller, index) in state.bestSellers"
                   :key="index"
+                  class="px-0"
+                  :prepend-avatar="bestSeller.image"
                 >
-                  <template v-slot:prepend>
-                    <VAvatar>
-                      <VImg :src="bestSeller.image"></VImg>
-                    </VAvatar>
-                  </template>
                   <VListItemTitle>
                     <h5>
                       {{ bestSeller.name }}
@@ -44,7 +41,6 @@
                   </VListItemTitle>
                   <VListItemTitle>
                     <VRating
-                      class="ml-n4"
                       v-model="bestSeller.stars"
                       color="accent"
                       density="compact"
