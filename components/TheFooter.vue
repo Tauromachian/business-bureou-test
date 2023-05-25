@@ -42,8 +42,8 @@ const state = reactive({
   ],
   socials: [
     { icon: "facebook", to: "" },
-    { icon: "twitter", to: "" },
     { icon: "instagram", to: "" },
+    { icon: "twitter", to: "" },
   ],
 });
 </script>
