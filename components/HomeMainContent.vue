@@ -44,19 +44,19 @@
             <VCard flat class="mb-4 text-center">
               <VImg :src="product.image" aspect-ratio="1"></VImg>
               <VCardSubtitle class="mt-4">
-                <h5>
+                <h4>
                   {{ product.category }}
-                </h5>
+                </h4>
               </VCardSubtitle>
               <VCardTitle
-                ><h4>
+                ><h3>
                   {{ product.name }}
-                </h4>
+                </h3>
               </VCardTitle>
               <VCardText>
-                <h5>
+                <h4>
                   {{ product.price }}
-                </h5>
+                </h4>
               </VCardText>
             </VCard>
           </VCol>
