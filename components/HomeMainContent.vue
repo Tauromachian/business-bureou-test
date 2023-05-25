@@ -9,11 +9,18 @@
         <VTextField v-model="search" label="Search" solo></VTextField>
 
         <!-- Categories -->
-        <VList>
-          <VListItem v-for="(category, index) in state.categories" :key="index">
-            <VListItemContent>{{ category }}</VListItemContent>
-          </VListItem>
-        </VList>
+        <VCard flat>
+          <VCardText>
+            <VList>
+              <VListItem
+                v-for="(category, index) in state.categories"
+                :key="index"
+              >
+                <VListItemContent>{{ category }}</VListItemContent>
+              </VListItem>
+            </VList>
+          </VCardText>
+        </VCard>
 
         <!-- Best Sellers -->
         <VCard flat>
