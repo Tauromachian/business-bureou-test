@@ -35,7 +35,7 @@ const state = reactive({
   storeLinks: [
     { icon: "heart", to: "" },
     { icon: "cart", to: "" },
-    { icon: "search", to: "" },
+    { icon: "magnify", to: "" },
   ],
 });
 </script>
