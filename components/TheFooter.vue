@@ -1,7 +1,7 @@
 <template>
   <footer class="d-flex flex-column align-center" v-once>
     <AppLogo white-variant></AppLogo>
-    <div class="d-flex gap-5">
+    <div class="d-flex gap-5 footer-links">
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
@@ -52,5 +52,10 @@ const state = reactive({
 footer {
   background-color: rgb(var(--v-theme-primary));
   color: rgb(var(--v-theme-neutral));
+}
+
+.footer-links {
+  text-transform: uppercase;
+  font-family: var(--primary-font-family);
 }
 </style>
