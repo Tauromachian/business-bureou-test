@@ -5,8 +5,10 @@
     </div>
     <v-row>
       <!-- Sidebar -->
-      <VCol cols="3">
-        <VTextField v-model="search" label="Search" solo></VTextField>
+      <VCol cols="3" class="d-flex flex-column gap-9">
+        <div>
+          <VTextField v-model="search" label="Search" solo></VTextField>
+        </div>
 
         <!-- Categories -->
         <div>
