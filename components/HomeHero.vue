@@ -26,10 +26,6 @@
   grid-column: span 2;
 }
 
-.girls-power {
-  height: fit-content;
-}
-
 .h-fit {
   height: fit-content;
 }
