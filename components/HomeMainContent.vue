@@ -25,6 +25,9 @@
         <!-- Best Sellers -->
         <VCard flat>
           <VCardText>
+            <v-card-title>
+              <h2>Best Sellers</h2>
+            </v-card-title>
             <v-list class="d-flex flex-column gap-6">
               <v-list-item
                 v-for="(bestSeller, index) in state.bestSellers"
@@ -36,14 +39,17 @@
                   </VAvatar>
                 </template>
                 <VListItemTitle>
-                  {{ bestSeller.name }}
+                  <h5>
+                    {{ bestSeller.name }}
+                  </h5>
                 </VListItemTitle>
                 <VListItemTitle>
-                  <v-rating
+                  <VRating
                     class="ml-n4"
                     v-model="bestSeller.stars"
+                    color="accent"
                     readonly
-                  ></v-rating>
+                  ></VRating>
                 </VListItemTitle>
                 <VListItemTitle>
                   {{ bestSeller.price }}
