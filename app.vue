@@ -1,5 +1,6 @@
 <template>
   <VApp>
+    <TheBanner></TheBanner>
     <VContainer>
       <TheNav></TheNav>
     </VContainer>
