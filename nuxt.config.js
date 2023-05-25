@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     moduleOptions: {
       /* nuxt-vuetify module options */
       treeshaking: true,
-      useIconCDN: false,
+      useIconCDN: true,
       /* vite-plugin-vuetify options */
       styles: true,
       autoImport: true,
