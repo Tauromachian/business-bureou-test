@@ -140,4 +140,8 @@ const state = reactive({
 h3 {
   font-family: var(--accent-font-family) !important;
 }
+
+.form-title {
+  color: white;
+}
 </style>
