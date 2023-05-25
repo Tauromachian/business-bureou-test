@@ -48,7 +48,9 @@
                     ></VRating>
                   </VListItemTitle>
                   <VListItemTitle>
-                    {{ bestSeller.price }}
+                    <h5>
+                      {{ bestSeller.price }}
+                    </h5>
                   </VListItemTitle>
                 </v-list-item>
               </v-list>
