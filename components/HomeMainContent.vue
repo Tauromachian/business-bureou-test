@@ -43,7 +43,7 @@
           <VCol md="4" v-for="(product, index) in state.products" :key="index">
             <VCard flat class="mb-4 text-center">
               <VImg :src="product.image" aspect-ratio="1"></VImg>
-              <VCardSubtitle>
+              <VCardSubtitle class="mt-4">
                 <h5>
                   {{ product.category }}
                 </h5>
