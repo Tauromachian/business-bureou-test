@@ -30,9 +30,11 @@
                 v-for="(bestSeller, index) in state.bestSellers"
                 :key="index"
               >
-                <v-list-img>
-                  <v-img :src="bestSeller.image"></v-img>
-                </v-list-img>
+                <template v-slot:prepend>
+                  <VAvatar>
+                    <VImg :src="bestSeller.image"></VImg>
+                  </VAvatar>
+                </template>
                 <VListItemTitle>
                   {{ bestSeller.name }}
                 </VListItemTitle>
@@ -108,22 +110,28 @@ const state = reactive({
   categories: ["Category 1", "Category 2", "Category 3"],
   bestSellers: [
     {
-      name: "Best Seller 1",
+      name: "Bunny backpack",
+      stars: 4,
+      price: "$10",
+      image: "for-home-2-580x870.jpg",
+    },
+    {
+      name: "Rabbit pillow",
+      stars: 4,
+      price: "$10",
+      image: "for-home-13-1-580x870.jpg",
+    },
+    {
+      name: "Bear pillow",
+      stars: 4,
+      price: "$70",
+      image: "for-home-14-580x870.jpg",
+    },
+    {
+      name: "Rabbit Casket",
       stars: 4,
       price: "$100",
-      image: "best-seller-image-url-1",
-    },
-    {
-      name: "Best Seller 2",
-      stars: 5,
-      price: "$200",
-      image: "best-seller-image-url-2",
-    },
-    {
-      name: "Best Seller 3",
-      stars: 3,
-      price: "$300",
-      image: "best-seller-image-url-3",
+      image: "for-home-15-580x870.jpg",
     },
   ],
   products: [
