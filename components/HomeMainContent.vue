@@ -28,7 +28,9 @@
         <!-- Opt In Form -->
         <VCard flat color="accent">
           <VCardText>
-            <h2 class="text-h4 mb-4 text-center">Join our Newsletter</h2>
+            <h2 class="text-h4 mb-4 text-center form-title">
+              Join our Newsletter
+            </h2>
             <v-form>
               <VTextField v-model="email" label="Email" solo></VTextField>
               <VBtn @click="submit">Submit</VBtn>
@@ -134,7 +136,8 @@ const state = reactive({
 </script>
 
 <style lang="scss" scoped>
+.form-title,
 h3 {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family) !important;
 }
 </style>
