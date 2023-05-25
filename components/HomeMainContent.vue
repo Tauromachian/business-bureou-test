@@ -11,6 +11,7 @@
             v-model="search"
             variant="outlined"
             label="Search"
+            class="mb-n4"
             solo
           ></VTextField>
         </div>
