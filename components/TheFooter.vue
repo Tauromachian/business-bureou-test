@@ -58,4 +58,8 @@ footer {
   text-transform: uppercase;
   font-family: var(--primary-font-family);
 }
+
+a {
+  color: white;
+}
 </style>
