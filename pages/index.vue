@@ -1,10 +1,10 @@
 <template>
-  <VContainer>
+  <AppContainer>
     <HomeHero></HomeHero>
     <HomeCategories></HomeCategories>
     <HomeMainContent></HomeMainContent>
     <HomeInstagram></HomeInstagram>
-  </VContainer>
+  </AppContainer>
 </template>
 
 <script setup></script>
