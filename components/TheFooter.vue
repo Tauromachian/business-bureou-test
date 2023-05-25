@@ -10,7 +10,7 @@
         {{ link.text }}
       </NuxtLink>
     </div>
-    <div class="d-flex gap-5">
+    <div class="d-flex gap-5 mt-5">
       <NuxtLink
         v-for="(social, index) in state.socials"
         :key="`link-${index}`"
