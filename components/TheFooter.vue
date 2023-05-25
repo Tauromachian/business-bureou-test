@@ -16,7 +16,7 @@
         :key="`link-${index}`"
         :to="social.to"
       >
-        {{ social.icon }}
+        <i class="mdi text-h4" :class="`mdi-${social.icon}`"> </i>
       </NuxtLink>
     </div>
     <div class="mb-5 mt-8">
