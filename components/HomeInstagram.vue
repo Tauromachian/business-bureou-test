@@ -4,11 +4,11 @@
       <h2>Instagram @Kidsrus</h2>
     </div>
     <div class="images gap-3">
-      <v-img
+      <VImg
         v-for="(image, index) in state.images"
         :key="index"
         :src="image"
-      ></v-img>
+      ></VImg>
     </div>
   </AppSection>
 </template>
