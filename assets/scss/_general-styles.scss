@@ -1,5 +1,5 @@
 body {
-  font-family: "Quicksand";
+  font-family: var(--body-font-family);
   font-weight: 500;
 }
 
@@ -8,5 +8,5 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Francois One";
+  font-family: var(--primary-font-family);
 }
