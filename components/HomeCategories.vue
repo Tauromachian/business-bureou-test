@@ -2,8 +2,15 @@
   <div class="d-flex justify-center">
     <VCard flat class="w-100 border-dotted">
       <VCardText class="d-flex mx-8 justify-center text-center">
-        <VRow class="gap-15 mx-14 py-8">
-          <VCol v-for="(item, index) in state.items" :key="`image-${index}`">
+        <VRow>
+          <VCol
+            cols="12"
+            sm="6"
+            md="3"
+            class="py-8 px-15"
+            v-for="(item, index) in state.items"
+            :key="`image-${index}`"
+          >
             <VImg :src="item.image"></VImg>
             <h5 class="mt-4">{{ item.text }}</h5>
           </VCol>
