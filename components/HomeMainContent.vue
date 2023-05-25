@@ -23,11 +23,9 @@
         </VCard>
 
         <!-- Best Sellers -->
-        <VCard flat>
+        <h2 class="mb-0">Best Sellers</h2>
+        <VCard class="mt-0 border-dotted" variant="outlined" flat>
           <VCardText>
-            <v-card-title>
-              <h2>Best Sellers</h2>
-            </v-card-title>
             <v-list class="d-flex flex-column gap-6">
               <v-list-item
                 v-for="(bestSeller, index) in state.bestSellers"
