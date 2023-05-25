@@ -1,5 +1,8 @@
 <template>
   <AppSection>
+    <div class="text-center mb-8">
+      <h2>New Arrivals</h2>
+    </div>
     <v-row>
       <!-- Sidebar -->
       <VCol cols="3">
