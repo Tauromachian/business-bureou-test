@@ -9,4 +9,9 @@ h3,
 h4,
 h5 {
   font-family: var(--primary-font-family);
+  color: rgb(var(--v-theme-accent2));
+}
+
+a {
+  color: rgb(var(--v-theme-accent2));
 }
