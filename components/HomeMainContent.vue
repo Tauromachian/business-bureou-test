@@ -58,7 +58,12 @@
               Join our Newsletter
             </h2>
             <v-form>
-              <VTextField v-model="email" label="Email" solo></VTextField>
+              <VTextField
+                variant="outlined"
+                v-model="email"
+                label="Your email address*"
+                solo
+              ></VTextField>
               <VBtn @click="submit">Submit</VBtn>
             </v-form>
           </VCardText>
