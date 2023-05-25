@@ -16,14 +16,33 @@
         </VList>
 
         <!-- Best Sellers -->
-        <VList>
-          <VListItem
-            v-for="(bestSeller, index) in state.bestSellers"
-            :key="index"
-          >
-            <VListItemContent>{{ bestSeller }}</VListItemContent>
-          </VListItem>
-        </VList>
+        <VCard flat>
+          <VCardText>
+            <v-list class="d-flex flex-column gap-6">
+              <v-list-item
+                v-for="(bestSeller, index) in state.bestSellers"
+                :key="index"
+              >
+                <v-list-img>
+                  <v-img :src="bestSeller.image"></v-img>
+                </v-list-img>
+                <VListItemTitle>
+                  {{ bestSeller.name }}
+                </VListItemTitle>
+                <VListItemTitle>
+                  <v-rating
+                    class="ml-n4"
+                    v-model="bestSeller.stars"
+                    readonly
+                  ></v-rating>
+                </VListItemTitle>
+                <VListItemTitle>
+                  {{ bestSeller.price }}
+                </VListItemTitle>
+              </v-list-item>
+            </v-list>
+          </VCardText>
+        </VCard>
 
         <!-- Opt In Form -->
         <VCard flat color="accent">
@@ -75,7 +94,26 @@ const state = reactive({
   search: "",
   email: "",
   categories: ["Category 1", "Category 2", "Category 3"],
-  bestSellers: ["Best Seller 1", "Best Seller 2", "Best Seller 3"],
+  bestSellers: [
+    {
+      name: "Best Seller 1",
+      stars: 4,
+      price: "$100",
+      image: "best-seller-image-url-1",
+    },
+    {
+      name: "Best Seller 2",
+      stars: 5,
+      price: "$200",
+      image: "best-seller-image-url-2",
+    },
+    {
+      name: "Best Seller 3",
+      stars: 3,
+      price: "$300",
+      image: "best-seller-image-url-3",
+    },
+  ],
   products: [
     {
       name: "Product 1",
