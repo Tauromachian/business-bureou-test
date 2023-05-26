@@ -4,15 +4,16 @@
       <VCol cols="12" md="4">
         <VImg :src="state.product.image"></VImg>
       </VCol>
-      <VCol cols="12" md="8" class="mt-4">
+      <VCol cols="12" md="8" class="pl-10 mt-4">
         <h4>{{ state.product.price }}</h4>
         <VRating
           :model-value="5"
           color="accent"
           density="compact"
           readonly
+          class="mb-6"
         ></VRating>
-        <p>
+        <p class="mb-6">
           {{ state.product.description }}
         </p>
 
