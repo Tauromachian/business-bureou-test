@@ -73,5 +73,7 @@ tr {
 th,
 td {
   border-bottom: 2px solid rgb(223, 222, 222);
+  margin-top: 20px;
+  height: 40px;
 }
 </style>
