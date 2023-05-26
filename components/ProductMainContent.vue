@@ -61,4 +61,17 @@ const state = reactive({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+table {
+  border-spacing: 0;
+}
+
+tr {
+  border-spacing: 0;
+}
+
+th,
+td {
+  border-bottom: 2px solid rgb(223, 222, 222);
+}
+</style>
