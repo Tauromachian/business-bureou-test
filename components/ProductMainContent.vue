@@ -27,7 +27,7 @@
           <span class="text-accent2"> Browser Whishlist </span>
         </p>
 
-        <table class="w-100 border-dotted">
+        <table class="w-100 border-dotted text-left">
           <tr>
             <th class="text-accent2">SKU:</th>
             <td>Data 1</td>
