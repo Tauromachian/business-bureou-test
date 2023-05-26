@@ -10,7 +10,11 @@
             :key="`related-images-${index}`"
             class="pr-0"
           >
-            <VImg @click="changeShowcasedImage(image)" :src="image"></VImg>
+            <VImg
+              class="showCasedImage"
+              @click="changeShowcasedImage(image)"
+              :src="image"
+            ></VImg>
           </VCol>
         </VRow>
       </VCol>
@@ -77,6 +81,10 @@ const changeShowcasedImage = (newImage) => {
 </script>
 
 <style lang="scss" scoped>
+.showCasedImage {
+  cursor: pointer;
+}
+
 table {
   border-spacing: 0;
 }
