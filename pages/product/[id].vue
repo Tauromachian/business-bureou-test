@@ -1,9 +1,9 @@
 <template>
-  <VContainer>
+  <AppContainer>
     <ProductMainContent></ProductMainContent>
     <ProductInfoTab></ProductInfoTab>
     <ProductRelated></ProductRelated>
-  </VContainer>
+  </AppContainer>
 </template>
 
 <script setup></script>
