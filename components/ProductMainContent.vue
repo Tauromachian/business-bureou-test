@@ -29,15 +29,15 @@
 
         <table class="w-100 border-dotted">
           <tr>
-            <th>Header 1</th>
+            <th class="text-accent2">SKU:</th>
             <td>Data 1</td>
           </tr>
           <tr>
-            <th>Header 2</th>
+            <th class="text-accent2">Category:</th>
             <td>Data 2</td>
           </tr>
           <tr>
-            <th>Header 3</th>
+            <th class="text-accent2">Tags:</th>
             <td>Data 3</td>
           </tr>
         </table>
