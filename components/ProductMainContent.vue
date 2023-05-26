@@ -22,7 +22,10 @@
           <VBtn color="accent">Add to Cart</VBtn>
         </div>
 
-        <p>Product added! Browser Whishlist</p>
+        <p class="mb-12">
+          Product added!
+          <span class="text-accent2"> Browser Whishlist </span>
+        </p>
 
         <table class="w-100 border-dotted">
           <tr>
