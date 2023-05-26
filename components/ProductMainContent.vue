@@ -3,6 +3,16 @@
     <VRow>
       <VCol cols="12" md="5">
         <VImg :src="state.product.image"></VImg>
+        <VRow class="mt-1">
+          <VCol
+            cols="2"
+            v-for="(image, index) in state.product.relatedImages"
+            :key="`related-images-${index}`"
+            class="pr-0"
+          >
+            <VImg :src="image"></VImg>
+          </VCol>
+        </VRow>
       </VCol>
       <VCol cols="12" md="7" class="pl-10 mt-4">
         <h4>{{ state.product.price }}</h4>
@@ -57,6 +67,7 @@ const state = reactive({
     category: "Category 1",
     price: "$10",
     image: "/boys-8-1-580x870.jpg",
+    relatedImages: ["/boys-8-1-580x870.jpg", "/boys-8-580x870(1).jpg"],
   },
 });
 </script>
