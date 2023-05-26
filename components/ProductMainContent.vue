@@ -10,7 +10,7 @@
             :key="`related-images-${index}`"
             class="pr-0"
           >
-            <VImg :src="image"></VImg>
+            <VImg @click="changeShowcasedImage(image)" :src="image"></VImg>
           </VCol>
         </VRow>
       </VCol>
@@ -70,6 +70,10 @@ const state = reactive({
     relatedImages: ["/boys-8-1-580x870.jpg", "/boys-8-580x870(1).jpg"],
   },
 });
+
+const changeShowcasedImage = (newImage) => {
+  state.product.image = newImage;
+};
 </script>
 
 <style lang="scss" scoped>
