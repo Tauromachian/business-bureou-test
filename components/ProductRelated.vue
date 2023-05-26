@@ -22,6 +22,12 @@
               {{ product.price }}
             </h4>
           </VCardText>
+          <VRating
+            :model-value="product.rating"
+            density="compact"
+            color="accent"
+            readonly
+          ></VRating>
         </VCard>
       </VCol>
     </VRow>
@@ -42,24 +48,28 @@ const state = reactive({
       category: "Category 1",
       price: "$10",
       image: "/boys-8-1-580x870.jpg",
+      rating: 5,
     },
     {
       name: "Product 2",
       category: "Category 2",
       price: "$20",
       image: "/boys-8-580x870.jpg",
+      rating: 4,
     },
     {
       name: "Product 3",
       category: "Category 1",
       price: "$30",
       image: "/for-home-5-580x870.jpg",
+      rating: 5,
     },
     {
       name: "Product 4",
       category: "Category 3",
       price: "$40",
       image: "/for-home-5-580x870.jpg",
+      rating: 5,
     },
   ],
 });
