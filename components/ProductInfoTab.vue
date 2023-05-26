@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <AppSection>
     <v-tabs v-model="activeTab" align-tabs="center" class="mb-10">
       <v-tab value="description">Description</v-tab>
       <v-tab value="additional-info">Additional Information</v-tab>
@@ -32,7 +32,7 @@
         </p>
       </VWindowItem>
     </VWindow>
-  </div>
+  </AppSection>
 </template>
 
 <script setup>
