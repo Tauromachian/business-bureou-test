@@ -4,7 +4,7 @@
       <VCol md="4">
         <VImg :src="state.product.image"></VImg>
       </VCol>
-      <VCol md="8">
+      <VCol md="8" class="mt-4">
         <h4>{{ state.product.price }}</h4>
         <VRating
           :model-value="5"
