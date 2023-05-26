@@ -1,4 +1,23 @@
-@import "@jogarcia/mgrid/container.scss";
+@use "@jogarcia/mgrid/container.scss" with (
+  $breakpoints: (
+    "xs": (
+      "min": 0px,
+      "width": 100%,
+    ),
+    "sm": (
+      "min": 600px,
+      "width": 100%,
+    ),
+    "md": (
+      "min": 960px,
+      "width": 900px,
+    ),
+    "lg": (
+      "min": 1280px,
+      "width": 1200px,
+    ),
+  )
+);
 
 @import "variables";
 @import "general-styles";
