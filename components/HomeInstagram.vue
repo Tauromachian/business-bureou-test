@@ -1,7 +1,7 @@
 <template>
   <AppSection>
-    <div class="text-center">
-      <h2>Instagram @Kidsrus</h2>
+    <div class="d-flex justify-center mb-9">
+      <AppHeader> Instagram @Kidsrus </AppHeader>
     </div>
     <div class="images gap-3">
       <VImg

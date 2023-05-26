@@ -1,7 +1,7 @@
 <template>
   <AppSection>
-    <div class="text-center">
-      <h2>Related products</h2>
+    <div class="d-flex justify-center mb-9">
+      <AppHeader> Related products </AppHeader>
     </div>
     <VRow>
       <VCol md="3" v-for="(product, index) in state.products" :key="index">

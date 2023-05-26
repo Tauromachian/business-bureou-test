@@ -1,7 +1,7 @@
 <template>
   <AppSection>
-    <div class="text-center mb-8">
-      <h2>New Arrivals</h2>
+    <div class="d-flex justify-center mb-9">
+      <AppHeader> Instagram @Kidsrus </AppHeader>
     </div>
     <v-row>
       <!-- Sidebar -->
