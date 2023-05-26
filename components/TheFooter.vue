@@ -52,6 +52,14 @@ const state = reactive({
 footer {
   background-color: rgb(var(--v-theme-primary));
   color: rgb(var(--v-theme-neutral));
+
+  --mask: radial-gradient(42.43px at 50% 60px, #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(42.43px at 50% -30px, #0000 99%, #000 101%) 50% 30px/120px
+      100% repeat-x;
+
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .footer-links {
