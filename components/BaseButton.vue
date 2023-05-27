@@ -9,6 +9,7 @@
     v-bind="$attrs"
     :style="buttonStyles"
   >
+    <span class="base-button__overlay"></span>
     <span class="base-button__content">
       <VIcon v-if="icon" :icon="icon"></VIcon>
       <slot v-else> </slot>
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-import { getCssColor, getContrast } from "@/utils/colors";
+import { getCssColor, getContrast, getHoverColor } from "@/utils/colors";
 
 export default {
   name: "BaseButton",
@@ -61,6 +62,8 @@ export default {
 
       const colorContrast = getContrast(color);
 
+      const hoverColor = getHoverColor(color);
+
       return [{ "background-color": color, color: colorContrast }];
     },
 
@@ -84,15 +87,24 @@ export default {
   text-transform: uppercase;
   font-family: var(--primary-font-family);
 }
-.button:hover {
-  background-color: var(--color-secondary) !important;
-}
-
 .base-button__prepend {
   grid-area: prepend;
 }
 .base-button__content {
   grid-area: content;
+}
+.base-button__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: currentColor;
+  transition: all 0.1s linear;
+}
+.button:hover > .base-button__overlay {
+  opacity: 0.08;
 }
 
 .icon-button {
