@@ -1,7 +1,10 @@
 <template>
   <div
     class="w-100 floating-label"
-    :class="{ 'border-dotted': variant === 'dotted' }"
+    :class="{
+      'border-dotted': variant === 'dotted',
+      'border-dashed': variant === 'dashed',
+    }"
   >
     <input
       type="text"
