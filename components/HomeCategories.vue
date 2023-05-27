@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-center">
-    <VCard flat class="w-100 border-dotted">
+    <VCard flat variant="outlined" class="w-100 border-dotted">
       <VCardText class="d-flex mx-8 justify-center text-center">
         <VRow>
           <VCol
