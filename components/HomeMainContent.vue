@@ -75,6 +75,7 @@
               <BaseTextField
                 class="mb-3"
                 v-model="email"
+                variant="dashed"
                 label="Your email address*"
               >
               </BaseTextField>
