@@ -56,6 +56,7 @@ export default defineNuxtConfig({
               neutral: "#ffffff",
               accent: "#E5745D",
               accent2: "#496683",
+              "gray-light": "#dfddda",
             },
           },
         },
