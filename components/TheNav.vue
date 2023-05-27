@@ -9,12 +9,16 @@
       >
         {{ link.text }}
       </NuxtLink>
-      <NuxtLink
-        v-for="(link, index) in state.storeLinks"
-        :key="`link-${index}`"
-        :to="link.to"
-      >
-        <i class="mdi text-h5" :class="`mdi-${link.icon}`"> </i>
+      <NuxtLink>
+        <VIcon icon="mdi-heart-outline"></VIcon>
+      </NuxtLink>
+      <NuxtLink>
+        <VBadge color="accent" content="0" offset-x="-6">
+          <VIcon icon="mdi-cart-outline"></VIcon>
+        </VBadge>
+      </NuxtLink>
+      <NuxtLink>
+        <VIcon icon="mdi-magnify"></VIcon>
       </NuxtLink>
     </div>
   </header>
@@ -31,11 +35,6 @@ const state = reactive({
     { text: "Pages", to: "" },
     { text: "Shortcodes", to: "" },
     { text: "Post types", to: "" },
-  ],
-  storeLinks: [
-    { icon: "heart-outline", to: "" },
-    { icon: "cart-outline", to: "" },
-    { icon: "magnify", to: "" },
   ],
 });
 </script>
