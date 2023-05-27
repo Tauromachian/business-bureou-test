@@ -32,11 +32,3 @@ const state = reactive({
   ],
 });
 </script>
-
-<style scoped>
-.border-dotted {
-  border: 2px dotted #000000;
-  border-color: rgb(223, 221, 218);
-  width: fit-content;
-}
-</style>
