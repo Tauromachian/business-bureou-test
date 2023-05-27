@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { getCssColor, getContrast, getHoverColor } from "@/utils/colors";
+import { getCssColor, getContrast } from "@/utils/colors";
 
 export default {
   name: "BaseButton",
@@ -61,8 +61,6 @@ export default {
       const color = getCssColor(this.color) ?? "#ffffff";
 
       const colorContrast = getContrast(color);
-
-      const hoverColor = getHoverColor(color);
 
       return [{ "background-color": color, color: colorContrast }];
     },
