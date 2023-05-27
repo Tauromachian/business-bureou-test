@@ -9,6 +9,7 @@
     v-bind="$attrs"
     :style="buttonStyles"
   >
+    <span class="border-dashed base-button__inside-border"></span>
     <span class="base-button__overlay"></span>
     <span class="base-button__content">
       <VIcon v-if="icon" :icon="icon"></VIcon>
@@ -90,6 +91,15 @@ export default {
 }
 .base-button__content {
   grid-area: content;
+}
+
+.base-button__inside-border {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  width: calc(100% - 4px);
 }
 .base-button__overlay {
   position: absolute;
