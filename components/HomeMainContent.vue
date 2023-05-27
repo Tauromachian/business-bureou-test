@@ -71,17 +71,17 @@
             <h2 class="text-h4 mb-4 text-center form-title">
               Join our Newsletter
             </h2>
-            <v-form>
-              <VTextField
-                variant="outlined"
+            <VForm>
+              <BaseTextField
+                class="mb-3"
                 v-model="email"
                 label="Your email address*"
-                solo
-              ></VTextField>
+              >
+              </BaseTextField>
               <BaseButton color="#ffffff" class="w-100" block @click="submit">
                 Submit
               </BaseButton>
-            </v-form>
+            </VForm>
           </VCardText>
         </VCard>
       </VCol>
