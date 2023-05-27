@@ -40,7 +40,7 @@ export function getCssColor(color) {
     document.documentElement
   ).getPropertyValue(`--v-theme-${color}`.trim());
   if (computedColor) {
-    return computedColor.trim();
+    return `rgb(${computedColor.trim()})`;
   }
 
   // If it's not a valid color or CSS variable, return null
