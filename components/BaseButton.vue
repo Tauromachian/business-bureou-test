@@ -61,7 +61,7 @@ export default {
 
       const colorContrast = getContrast(color);
 
-      return [{ "background-color": `rgb(${color})`, color: colorContrast }];
+      return [{ "background-color": color, color: colorContrast }];
     },
 
     sizeClasses() {
