@@ -32,8 +32,10 @@
         </p>
 
         <div class="d-flex">
-          <VTextField></VTextField>
-          <VBtn color="accent">Add to Cart</VBtn>
+          <div class="w-25">
+            <BaseTextField></BaseTextField>
+          </div>
+          <BaseButton color="accent" class="ml-1">Add to Cart</BaseButton>
         </div>
 
         <p class="mb-12">
