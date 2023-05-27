@@ -19,18 +19,15 @@
         <!-- Categories -->
         <div>
           <h2 class="mb-0">Categories</h2>
-          <VCard flat class="border-dotted w-100" variant="outlined">
-            <VCardText>
-              <VList>
-                <VListItem
-                  v-for="(category, index) in state.categories"
-                  :key="index"
-                >
-                  <VListItemContent>{{ category }}</VListItemContent>
-                </VListItem>
-              </VList>
-            </VCardText>
-          </VCard>
+          <table class="w-100 border-dotted text-left pa-4">
+            <tr
+              v-for="(category, index) in state.categories"
+              :key="`home-category-${index}`"
+            >
+              <th class="text-accent2">{{ category.name }}</th>
+              <td>({{ category.value }})</td>
+            </tr>
+          </table>
         </div>
 
         <!-- Best Sellers -->
@@ -123,7 +120,11 @@ import { reactive } from "vue";
 const state = reactive({
   search: "",
   email: "",
-  categories: ["Category 1", "Category 2", "Category 3"],
+  categories: [
+    { name: "Category 1", value: 20 },
+    { name: "Category 2", value: 20 },
+    { name: "Category 3", value: 20 },
+  ],
   bestSellers: [
     {
       name: "Bunny backpack",
@@ -221,5 +222,20 @@ h3 {
 
 .category {
   color: rgb(var(--v-theme-accent));
+}
+
+table {
+  border-spacing: 0;
+}
+
+tr {
+  border-spacing: 0;
+}
+
+th,
+td {
+  border-bottom: 2px solid rgb(223, 222, 222);
+  margin-top: 20px;
+  height: 40px;
 }
 </style>
