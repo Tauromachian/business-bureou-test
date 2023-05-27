@@ -51,7 +51,6 @@ defineProps({
 }
 
 label {
-  color: #999;
   font-size: 16px;
   position: absolute;
   pointer-events: none;
