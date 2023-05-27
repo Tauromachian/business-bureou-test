@@ -1,0 +1,13 @@
+.border-dotted,
+.border-dashed {
+  border-color: rgb(223, 221, 218);
+  width: fit-content;
+}
+
+.border-dotted {
+  border: 2px dotted;
+}
+
+.border-dashed {
+  border: 2px dashed;
+}
