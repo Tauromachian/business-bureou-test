@@ -82,7 +82,7 @@
                 label="Your email address*"
                 solo
               ></VTextField>
-              <VBtn @click="submit">Submit</VBtn>
+              <BaseButton block @click="submit">Submit</BaseButton>
             </v-form>
           </VCardText>
         </VCard>
