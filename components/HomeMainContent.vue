@@ -78,7 +78,9 @@
                 label="Your email address*"
                 solo
               ></VTextField>
-              <BaseButton block @click="submit">Submit</BaseButton>
+              <BaseButton color="#ffffff" class="w-100" block @click="submit">
+                Submit
+              </BaseButton>
             </v-form>
           </VCardText>
         </VCard>
