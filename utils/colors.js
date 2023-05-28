@@ -18,7 +18,7 @@ export function getContrast(hexColor) {
 }
 
 // Returns color
-export function getCssColor(color) {
+export function getCssColor(color, vuetifyThemeVariables) {
   // Create a new div and apply the color as a background
   let div = document.createElement("div");
   div.style.backgroundColor = color;
@@ -33,6 +33,10 @@ export function getCssColor(color) {
   // If it's a valid color, return the color
   if (isValidColor) {
     return color;
+  }
+
+  if (vuetifyThemeVariables) {
+    return vuetifyThemeVariables[color];
   }
 
   // If it's not a valid color, check if it's a valid CSS variable
