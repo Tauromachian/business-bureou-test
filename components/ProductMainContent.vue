@@ -38,7 +38,7 @@
           <BaseButton color="accent" class="ml-1">Add to Cart</BaseButton>
         </div>
 
-        <p class="mb-12">
+        <p class="mb-12 mt-4">
           Product added!
           <span class="text-accent2"> Browse Whishlist </span>
         </p>
