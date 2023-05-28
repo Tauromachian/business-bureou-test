@@ -99,7 +99,7 @@
 
       <!-- Content -->
       <VCol cols="9">
-        <VRow>
+        <VRow class="ml-4">
           <VCol md="4" v-for="(product, index) in state.products" :key="index">
             <VCard
               @click="$router.push('product/1')"
