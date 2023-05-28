@@ -6,7 +6,7 @@
         <VRow class="mt-1">
           <VCol
             cols="2"
-            v-for="(image, index) in state.product.relatedImages"
+            v-for="(image, index) in product.relatedImages"
             :key="`related-images-${index}`"
             class="pr-0"
           >
@@ -79,8 +79,6 @@ const state = reactive({
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi necessitatibus accusantium molestias, libero, nobis ex maxime fugiat voluptate delectus pariatur possimus laboriosam harum laborum ut sunt, in facilis quisquam quo?",
     category: "Category 1",
     price: "$10",
-    image: "/boys-8-1-580x870.jpg",
-    relatedImages: ["/boys-8-1-580x870.jpg", "/boys-8-580x870(1).jpg"],
   },
 });
 
