@@ -40,7 +40,7 @@ const state = reactive({
   ],
 });
 
-const emit = defineEmits("update:modelValue");
+const emit = defineEmits(["update:modelValue"]);
 
 const selectedCategories = computed({
   get() {

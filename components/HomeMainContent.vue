@@ -143,7 +143,7 @@ const props = defineProps({
     default: () => [],
   },
 });
-const emit = defineEmits("update:modelValue");
+const emit = defineEmits(["update:modelValue"]);
 
 const state = reactive({
   search: "",
@@ -259,6 +259,8 @@ const selectedCategories = computed({
 
 const selectedProducts = computed(() => {
   if (!selectedCategories.length) return state.products;
+
+  console.log("lol");
 
   return state.products.map((product) => {
     if (selectedCategories.includes(product.category)) return product;
