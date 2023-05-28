@@ -5,7 +5,7 @@
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
-        :to="''"
+        :to="{ name: link.name }"
         class="w-fit"
       >
         <span
