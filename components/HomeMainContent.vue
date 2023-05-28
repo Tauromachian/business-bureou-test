@@ -149,11 +149,11 @@ const state = reactive({
   search: "",
   email: "",
   categories: [
-    { name: "For Babies", value: 11 },
-    { name: "For Boys", value: 19 },
-    { name: "For Girls", value: 20 },
-    { name: "For Home", value: 14 },
-    { name: "For Play", value: 8 },
+    { name: "For Babies", value: "babies", amount: 11 },
+    { name: "For Boys", value: "boys", amount: 19 },
+    { name: "For Girls", value: "girls", amount: 20 },
+    { name: "For Home", value: "home", amount: 14 },
+    { name: "For Play", value: "toys", amount: 8 },
   ],
   bestSellers: [
     {
