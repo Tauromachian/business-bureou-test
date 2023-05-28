@@ -8,7 +8,10 @@
         :to="''"
         class="w-fit"
       >
-        <span class="d-flex flex-column align-center">
+        <span
+          class="d-flex flex-column align-center"
+          :class="{ active: $route.name === link.name }"
+        >
           {{ link.text }}
           <AppSeparator :active="$route.name === link.name"> </AppSeparator>
         </span>
@@ -51,5 +54,9 @@ const state = reactive({
 
 .w-fit {
   width: fit-content;
+}
+
+.active {
+  color: rgb(var(--v-theme-accent));
 }
 </style>
