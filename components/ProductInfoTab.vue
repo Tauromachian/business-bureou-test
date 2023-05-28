@@ -1,16 +1,25 @@
 <template>
   <AppSection>
-    <v-tabs hide-slider v-model="activeTab" align-tabs="center" class="mb-10">
-      <v-tab value="description">
-        <AppHeader> Description </AppHeader>
-      </v-tab>
-      <v-tab value="additional-info">
-        <AppHeader> Additional Information </AppHeader>
-      </v-tab>
-      <v-tab value="reviews">
-        <AppHeader> Reviews </AppHeader>
-      </v-tab>
-    </v-tabs>
+    <div class="d-flex justify-center gap-13">
+      <AppHeader
+        @click="activeTab = 'description'"
+        :active="activeTab === 'description'"
+      >
+        Description
+      </AppHeader>
+      <AppHeader
+        @click="activeTab = 'additional-info'"
+        :active="activeTab === 'additional-info'"
+      >
+        Additional Information
+      </AppHeader>
+      <AppHeader
+        @click="activeTab = 'reviews'"
+        :active="activeTab === 'reviews'"
+      >
+        Reviews
+      </AppHeader>
+    </div>
 
     <VWindow v-model="activeTab">
       <VWindowItem value="description">
