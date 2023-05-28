@@ -28,7 +28,10 @@
           class="mb-6"
         ></VRating>
         <p class="mb-6">
-          {{ state.product.description }}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+          necessitatibus accusantium molestias, libero, nobis ex maxime fugiat
+          voluptate delectus pariatur possimus laboriosam harum laborum ut sunt,
+          in facilis quisquam quo?,
         </p>
 
         <div class="d-flex">
@@ -65,22 +68,10 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
-
 import { useProductStore } from "@/stores/product";
 const productStore = useProductStore();
 
 const product = productStore.product;
-
-const state = reactive({
-  product: {
-    name: "Product 1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi necessitatibus accusantium molestias, libero, nobis ex maxime fugiat voluptate delectus pariatur possimus laboriosam harum laborum ut sunt, in facilis quisquam quo?",
-    category: "Category 1",
-    price: "$10",
-  },
-});
 
 const changeShowcasedImage = (newImage) => {
   state.product.image = newImage;
