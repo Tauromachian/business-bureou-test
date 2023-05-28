@@ -2,18 +2,21 @@
   <AppSection>
     <div class="d-flex justify-center gap-13">
       <AppHeader
+        class="tab-header"
         @click="activeTab = 'description'"
         :active="activeTab === 'description'"
       >
         Description
       </AppHeader>
       <AppHeader
+        class="tab-header"
         @click="activeTab = 'additional-info'"
         :active="activeTab === 'additional-info'"
       >
         Additional Information
       </AppHeader>
       <AppHeader
+        class="tab-header"
         @click="activeTab = 'reviews'"
         :active="activeTab === 'reviews'"
       >
@@ -75,4 +78,8 @@ import { ref } from "vue";
 const activeTab = ref(null);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.tab-header {
+  cursor: pointer;
+}
+</style>
