@@ -10,6 +10,7 @@
             class="py-8 px-15"
             v-for="(item, index) in state.items"
             :key="`image-${index}`"
+            @click="emit('filter:category', item.value)"
           >
             <VImg :src="item.image"></VImg>
             <h5 class="mt-4">{{ item.text }}</h5>
@@ -31,4 +32,6 @@ const state = reactive({
     { image: "toys.png", text: "Home & Toys", value: ["toys", "home"] },
   ],
 });
+
+const emit = defineEmits("filter:category");
 </script>
