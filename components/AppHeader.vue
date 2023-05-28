@@ -4,7 +4,7 @@
       <slot></slot>
     </h2>
     <span v-if="active" class="d-flex justify-center w-25">
-      <img class="img-header" src="/separator.png" />
+      <img src="/separator.png" />
     </span>
   </div>
 </template>
@@ -25,12 +25,6 @@ div {
 
 span {
   height: 16px;
-}
-
-.img-header {
-  img {
-    height: fit-content !important;
-    width: auto;
-  }
+  width: 30%;
 }
 </style>
