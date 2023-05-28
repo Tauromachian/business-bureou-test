@@ -39,6 +39,11 @@ export default {
       default: "",
     },
 
+    textColor: {
+      type: String,
+      default: "",
+    },
+
     size: {
       type: String,
       default: "regular",
@@ -63,7 +68,18 @@ export default {
 
       const colorContrast = getContrast(color);
 
-      return [{ "background-color": color, color: colorContrast }];
+      return [
+        {
+          "background-color": color,
+          color: this.textColorComputed ?? colorContrast,
+        },
+      ];
+    },
+
+    textColorComputed() {
+      const color = getCssColor(this.textColor);
+
+      return color;
     },
 
     sizeClasses() {
