@@ -1,6 +1,6 @@
 <template>
   <AppContainer>
-    <ProductHeader></ProductHeader>
+    <ProductHeader class="my-14"></ProductHeader>
     <ProductMainContent></ProductMainContent>
     <ProductInfoTab></ProductInfoTab>
     <ProductRelated></ProductRelated>
