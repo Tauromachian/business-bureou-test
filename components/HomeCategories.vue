@@ -7,7 +7,7 @@
             cols="12"
             sm="6"
             md="3"
-            class="py-8 px-15"
+            class="py-8 px-15 cursor-pointer"
             v-for="(item, index) in state.items"
             :key="`image-${index}`"
             @click="emit('filter:category', item.value)"
