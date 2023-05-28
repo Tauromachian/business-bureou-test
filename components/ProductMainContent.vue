@@ -19,7 +19,7 @@
         </VRow>
       </VCol>
       <VCol cols="12" md="7" class="pl-10 mt-4">
-        <h4>{{ state.product.price }}</h4>
+        <h4>{{ product.price }}</h4>
         <VRating
           :model-value="5"
           color="accent"
@@ -51,7 +51,7 @@
             </tr>
             <tr>
               <th class="text-accent2">Category:</th>
-              <td>Data 2</td>
+              <td>{{ product.categoryText }}</td>
             </tr>
             <tr>
               <th class="text-accent2">Tags:</th>
@@ -66,6 +66,11 @@
 
 <script setup>
 import { reactive } from "vue";
+
+import { useProductStore } from "@/stores/product";
+const productStore = useProductStore();
+
+const product = productStore.product;
 
 const state = reactive({
   product: {
