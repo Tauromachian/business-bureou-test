@@ -1,7 +1,7 @@
 <template>
   <header class="d-flex flex-column align-center">
     <AppLogo class="my-n15"></AppLogo>
-    <div class="d-flex gap-6 nav-links align-center" v-once>
+    <div class="d-flex gap-6 nav-links align-top" v-once>
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
