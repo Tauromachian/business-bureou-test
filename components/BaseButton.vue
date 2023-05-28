@@ -1,7 +1,6 @@
 <template>
   <component
-    :is="downloadLink ? 'a' : 'button'"
-    :href="downloadLink"
+    :is="'button'"
     type="button"
     role="button"
     class="justify-center items-center px-6 py-2 button"
