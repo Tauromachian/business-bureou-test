@@ -5,9 +5,13 @@
       <NuxtLink
         v-for="(link, index) in state.links"
         :key="`link-${index}`"
-        :to="link.to"
+        :to="''"
+        class="w-fit"
       >
-        {{ link.text }}
+        <span class="d-flex flex-column align-center">
+          {{ link.text }}
+          <AppSeparator :active="$route.name === link.name"> </AppSeparator>
+        </span>
       </NuxtLink>
       <NuxtLink>
         <VIcon icon="mdi-heart-outline"></VIcon>
@@ -29,12 +33,12 @@ import { reactive } from "vue";
 
 const state = reactive({
   links: [
-    { text: "Home", to: "" },
-    { text: "Shope Features", to: "" },
-    { text: "Clothes", to: "" },
-    { text: "Pages", to: "" },
-    { text: "Shortcodes", to: "" },
-    { text: "Post types", to: "" },
+    { text: "Home", name: "index" },
+    { text: "Shope Features", name: "" },
+    { text: "Clothes", name: "" },
+    { text: "Pages", name: "" },
+    { text: "Shortcodes", name: "" },
+    { text: "Post types", name: "" },
   ],
 });
 </script>
@@ -43,5 +47,9 @@ const state = reactive({
 .nav-links {
   text-transform: uppercase;
   font-family: var(--primary-font-family);
+}
+
+.w-fit {
+  width: fit-content;
 }
 </style>
