@@ -8,7 +8,7 @@
       <VCol cols="3" class="d-flex flex-column gap-9">
         <div>
           <SearchBar
-            v-model="search"
+            v-model="state.search"
             label="Search"
             class="mb-n4"
             solo
@@ -78,7 +78,7 @@
             <VForm>
               <BaseTextField
                 class="mb-3"
-                v-model="email"
+                v-model="state.email"
                 variant="dashed"
                 label="Your email address*"
               >
@@ -220,6 +220,8 @@ const state = reactive({
     },
   ],
 });
+
+const submit = () => {};
 </script>
 
 <style lang="scss" scoped>
