@@ -24,9 +24,11 @@
                 <tr
                   v-for="(category, index) in state.categories"
                   :key="`home-category-${index}`"
+                  class="cursor-pointer"
+                  @click="filterCategory([category.value])"
                 >
                   <th class="text-accent2">{{ category.name }}</th>
-                  <td class="text-end">({{ category.value }})</td>
+                  <td class="text-end">({{ category.amount }})</td>
                 </tr>
               </table>
             </AppCardBody>
@@ -264,6 +266,10 @@ const selectedProducts = computed(() => {
     if (selectedCategories.value.includes(product.category)) return product;
   });
 });
+
+const filterCategory = (category) => {
+  selectedCategories.value = category;
+};
 
 const submit = () => {};
 </script>
