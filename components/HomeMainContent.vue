@@ -109,7 +109,7 @@
               <VImg :src="product.image" aspect-ratio="1"></VImg>
               <VCardSubtitle class="mt-4">
                 <h4 class="category">
-                  {{ product.category }}
+                  {{ product.categoryText }}
                 </h4>
               </VCardSubtitle>
               <VCardTitle
@@ -179,55 +179,64 @@ const state = reactive({
   products: [
     {
       name: "Product 1",
-      category: "Category 1",
+      categoryText: "Toys",
+      category: "toys",
       price: "$10",
       image: "boys-8-1-580x870.jpg",
     },
     {
       name: "Product 2",
-      category: "Category 2",
+      categoryText: "Toys",
+      category: "toys",
       price: "$20",
       image: "boys-8-580x870.jpg",
     },
     {
       name: "Product 3",
-      category: "Category 1",
+      categoryText: "Toys",
+      category: "toys",
       price: "$30",
       image: "for-home-5-580x870.jpg",
     },
     {
       name: "Product 4",
-      category: "Category 3",
+      categoryText: "Toys",
+      category: "toys",
       price: "$40",
       image: "for-home-5-580x870.jpg",
     },
     {
       name: "Product 5",
-      category: "Category 2",
+      categoryText: "Toys",
+      category: "toys",
       price: "$50",
       image: "for-home-5-580x870.jpg",
     },
     {
       name: "Product 6",
-      category: "Category 1",
+      categoryText: "Toys",
+      category: "toys",
       price: "$60",
       image: "girls-1-2-580x870.jpg",
     },
     {
       name: "Product 7",
-      category: "Category 3",
+      categoryText: "Toys",
+      category: "toys",
       price: "$70",
       image: "girls-2-2-580x870.jpg",
     },
     {
       name: "Product 8",
-      category: "Category 2",
+      categoryText: "Toys",
+      category: "toys",
       price: "$80",
       image: "girls-6-1-580x870.jpg",
     },
     {
       name: "Product 9",
-      category: "Category 1",
+      categoryText: "Toys",
+      category: "toys",
       price: "$90",
       image: "girls-8-1-580x870.jpg",
     },
