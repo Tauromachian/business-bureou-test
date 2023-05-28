@@ -194,6 +194,7 @@ const state = reactive({
       category: "boys",
       price: "$10",
       image: "/boys-8-1-580x870.jpg",
+      relatedImages: ["/boys-8-1-580x870.jpg", "/boys-8-580x870(1).jpg"],
     },
     {
       name: "Product 2",
