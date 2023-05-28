@@ -138,11 +138,12 @@
 import { reactive, computed } from "vue";
 
 const props = defineProps({
-  selectedCategories: {
+  modelValue: {
     type: Array,
     default: () => [],
   },
 });
+const emit = defineEmits("update:modelValue");
 
 const state = reactive({
   search: "",
@@ -247,11 +248,20 @@ const state = reactive({
   ],
 });
 
+const selectedCategories = computed({
+  get() {
+    return this.modelValue;
+  },
+  set(val) {
+    emit("update:modelValue", val);
+  },
+});
+
 const selectedProducts = computed(() => {
-  if (!props.selectedCategories.length) return state.products;
+  if (!selectedCategories.length) return state.products;
 
   return state.products.map((product) => {
-    if (props.selectedCategories.includes(product.category)) return product;
+    if (selectedCategories.includes(product.category)) return product;
   });
 });
 
