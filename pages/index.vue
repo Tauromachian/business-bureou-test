@@ -2,7 +2,7 @@
   <AppContainer>
     <HomeHero></HomeHero>
     <HomeCategories v-model="state.selectedCategories"></HomeCategories>
-    <HomeMainContent></HomeMainContent>
+    <HomeMainContent v-model="state.selectedCategories"></HomeMainContent>
     <HomeInstagram></HomeInstagram>
   </AppContainer>
 </template>
