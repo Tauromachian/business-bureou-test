@@ -11,6 +11,7 @@
             v-model="state.search"
             label="Search"
             class="mb-n4"
+            @submit="applySearch"
             solo
           ></SearchBar>
         </div>
@@ -90,7 +91,6 @@
                 color="#ffffff"
                 class="w-100"
                 block
-                @click="submit"
               >
                 Submit
               </BaseButton>
@@ -154,6 +154,8 @@ const productStore = useProductStore();
 const state = reactive({
   search: "",
   email: "",
+
+  isSearchActive: false,
   categories: [
     { name: "For Babies", value: "babies", amount: 11 },
     { name: "For Boys", value: "boys", amount: 19 },
@@ -267,9 +269,23 @@ const selectedCategories = computed({
 const selectedProducts = computed(() => {
   if (!selectedCategories.value.length) return state.products;
 
-  return state.products.filter((product) => {
+  const selectedProducts = state.products.filter((product) => {
     if (selectedCategories.value.includes(product.category)) return product;
   });
+
+  if (state.isSearchActive) {
+    return selectedProducts.filter((product) => {
+      if (
+        product.name.includes(state.search) ||
+        product.category.includes(state.search) ||
+        product.categoryText.includes(state.search)
+      ) {
+        return true;
+      }
+    });
+  }
+
+  return selectedProducts;
 });
 
 const filterCategory = (category) => {
@@ -281,7 +297,9 @@ const selectProduct = (product) => {
   router.push(`product/1`);
 };
 
-const submit = () => {};
+const applySearch = () => {
+  state.isSearchActive = true;
+};
 </script>
 
 <style lang="scss" scoped>
