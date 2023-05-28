@@ -106,6 +106,7 @@ export default {
 }
 .base-button__content {
   grid-area: content;
+  align-self: center;
 }
 
 .base-button__inside-border {
