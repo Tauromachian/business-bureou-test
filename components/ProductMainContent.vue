@@ -2,7 +2,7 @@
   <AppSection>
     <VRow>
       <VCol cols="12" md="5">
-        <VImg :src="state.product.image"></VImg>
+        <VImg :src="product.image"></VImg>
         <VRow class="mt-1">
           <VCol
             cols="2"
