@@ -108,7 +108,13 @@
             :key="index"
           >
             <VCard
-              @click="$router.push('product/1')"
+              @click="
+                $router.push(
+                  `product/${product.name
+                    .toLocaleLowerCase()
+                    .replace(' ', '-')}-${product.category}-1`
+                )
+              "
               flat
               class="mb-4 rounded-0 text-center"
             >
