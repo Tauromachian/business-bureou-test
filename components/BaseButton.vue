@@ -52,6 +52,12 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      backgroundColor: "",
+      textColorComputed: "",
+    };
+  },
   computed: {
     buttonClasses() {
       const classes = {};
@@ -62,29 +68,47 @@ export default {
       return classes;
     },
 
-    buttonStyles() {
-      const color = getCssColor(this.color) ?? "#ffffff";
+    vuetifyThemeVariables() {
+      return this.$vuetify?.theme?.current?.colors;
+    },
 
-      const colorContrast = getContrast(color);
+    buttonStyles() {
+      if (!this.backgroundColor) return {};
+
+      const colorContrast = getContrast(this.backgroundColor);
 
       return [
         {
-          "background-color": color,
+          "background-color": this.backgroundColor ?? "#ffffff",
           color: this.textColorComputed ?? colorContrast,
         },
       ];
-    },
-
-    textColorComputed() {
-      const color = getCssColor(this.textColor);
-
-      return color;
     },
 
     sizeClasses() {
       if (this.size === "x-large") return { "h-16": true, "px-7": true };
 
       return { "h-9": true, "px-4": true };
+    },
+  },
+  watch: {
+    vuetifyThemeVariables: {
+      immediate: true,
+      handler: function (newValue) {
+        if (newValue) {
+          this.backgroundColor = this.getColor(this.color, newValue);
+          this.textColorComputed = this.getColor(this.textColor, newValue);
+        }
+      },
+    },
+  },
+  methods: {
+    getColor(color, vuetifyThemeVariables) {
+      return getCssColor(color, vuetifyThemeVariables) ?? "#ffffff";
+    },
+
+    getColorContrast(color) {
+      return getContrast(color);
     },
   },
 };
