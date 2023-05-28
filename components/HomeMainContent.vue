@@ -18,15 +18,19 @@
         <!-- Categories -->
         <div>
           <h2 class="mb-0">Categories</h2>
-          <table class="w-100 border-dot text-left pa-4">
-            <tr
-              v-for="(category, index) in state.categories"
-              :key="`home-category-${index}`"
-            >
-              <th class="text-accent2">{{ category.name }}</th>
-              <td>({{ category.value }})</td>
-            </tr>
-          </table>
+          <AppCard class="w-100">
+            <AppCardBody>
+              <table class="w-100 text-left">
+                <tr
+                  v-for="(category, index) in state.categories"
+                  :key="`home-category-${index}`"
+                >
+                  <th class="text-accent2">{{ category.name }}</th>
+                  <td>({{ category.value }})</td>
+                </tr>
+              </table>
+            </AppCardBody>
+          </AppCard>
         </div>
 
         <!-- Best Sellers -->
