@@ -260,9 +260,7 @@ const selectedCategories = computed({
 const selectedProducts = computed(() => {
   if (!selectedCategories.length) return state.products;
 
-  console.log("lol");
-
-  return state.products.map((product) => {
+  return state.products.filter((product) => {
     if (selectedCategories.includes(product.category)) return product;
   });
 });
