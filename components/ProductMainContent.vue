@@ -74,7 +74,7 @@ const productStore = useProductStore();
 const product = productStore.product;
 
 const changeShowcasedImage = (newImage) => {
-  state.product.image = newImage;
+  product.image = newImage;
 };
 </script>
 
