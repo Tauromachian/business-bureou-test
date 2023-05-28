@@ -33,7 +33,6 @@ defineProps({
 <style scoped>
 .floating-label {
   position: relative;
-  border: 2px;
   border-color: rgb(var(--v-theme-gray-light));
 }
 
