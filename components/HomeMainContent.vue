@@ -26,7 +26,7 @@
                   :key="`home-category-${index}`"
                 >
                   <th class="text-accent2">{{ category.name }}</th>
-                  <td>({{ category.value }})</td>
+                  <td class="text-end">({{ category.value }})</td>
                 </tr>
               </table>
             </AppCardBody>
