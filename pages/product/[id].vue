@@ -13,6 +13,12 @@
 
 <style lang="scss" scoped>
 .product-header {
-  max-width: 1400px;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 1700px) {
+  .product-header {
+    max-width: 1400px;
+  }
 }
 </style>
