@@ -100,7 +100,11 @@
       <!-- Content -->
       <VCol cols="9">
         <VRow class="ml-4">
-          <VCol md="4" v-for="(product, index) in state.products" :key="index">
+          <VCol
+            md="4"
+            v-for="(product, index) in selectedProducts"
+            :key="index"
+          >
             <VCard
               @click="$router.push('product/1')"
               flat
@@ -131,9 +135,9 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
 
-defineProps({
+const props = defineProps({
   selectedCategories: {
     type: Array,
     default: () => [],
@@ -241,6 +245,14 @@ const state = reactive({
       image: "girls-8-1-580x870.jpg",
     },
   ],
+});
+
+const selectedProducts = computed(() => {
+  if (!props.selectedCategories.length) return state.products;
+
+  return state.products.map((product) => {
+    if (props.selectedCategories.includes(product.category)) return product;
+  });
 });
 
 const submit = () => {};
