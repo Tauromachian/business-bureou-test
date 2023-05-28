@@ -1,5 +1,5 @@
 <template>
-  <AppCard class="w-100 text-center">
+  <AppCard class="w-100 text-center py-10">
     <h1>Blue Blouse</h1>
     <div class="d-flex justify-center">
       <VBreadcrumbs
