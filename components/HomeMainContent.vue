@@ -108,13 +108,7 @@
             :key="index"
           >
             <VCard
-              @click="
-                $router.push(
-                  `product/${product.name
-                    .toLocaleLowerCase()
-                    .replace(' ', '-')}-${product.category}-1`
-                )
-              "
+              @click="selectProduct(product)"
               flat
               class="mb-4 rounded-0 text-center"
             >
@@ -144,6 +138,8 @@
 
 <script setup>
 import { reactive, computed } from "vue";
+import { useProductStore } from "@/stores/product";
+import { useRouter } from "vue-router";
 
 const props = defineProps({
   modelValue: {
@@ -153,6 +149,8 @@ const props = defineProps({
 });
 const emit = defineEmits(["update:modelValue"]);
 
+const router = useRouter();
+const productStore = useProductStore();
 const state = reactive({
   search: "",
   email: "",
@@ -275,6 +273,11 @@ const selectedProducts = computed(() => {
 
 const filterCategory = (category) => {
   selectedCategories.value = [...category];
+};
+
+const selectProduct = (product) => {
+  productStore.setProduct(product);
+  router.push(`product/1`);
 };
 
 const submit = () => {};
