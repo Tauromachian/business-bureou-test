@@ -32,7 +32,7 @@
         </p>
 
         <div class="d-flex">
-          <div class="w-25">
+          <div class="text-container">
             <BaseTextField></BaseTextField>
           </div>
           <BaseButton color="accent" class="ml-1">Add to Cart</BaseButton>
@@ -102,5 +102,9 @@ td {
   border-bottom: 2px solid rgb(223, 222, 222);
   margin-top: 20px;
   height: 40px;
+}
+
+.text-container {
+  width: 50px;
 }
 </style>
