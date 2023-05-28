@@ -3,13 +3,20 @@
     <h2>
       <slot></slot>
     </h2>
-    <span class="d-flex justify-center w-25">
+    <span v-if="active" class="d-flex justify-center w-25">
       <VImg src="/separator.png"></VImg>
     </span>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  active: {
+    type: Boolean,
+    default: true,
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 div {
