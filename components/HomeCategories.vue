@@ -25,10 +25,10 @@ import { reactive } from "vue";
 
 const state = reactive({
   items: [
-    { image: "baby.png", text: "Baby & toddler", value: "baby" },
-    { image: "girl.png", text: "For Girls", value: "girl" },
-    { image: "boy.png", text: "For Boys", value: "boy" },
-    { image: "toys.png", text: "Home & Toys", value: "toy" },
+    { image: "baby.png", text: "Baby & toddler", value: ["babies"] },
+    { image: "girl.png", text: "For Girls", value: ["girls"] },
+    { image: "boy.png", text: "For Boys", value: ["boys"] },
+    { image: "toys.png", text: "Home & Toys", value: ["toys", "home"] },
   ],
 });
 </script>
