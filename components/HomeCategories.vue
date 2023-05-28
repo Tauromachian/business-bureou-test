@@ -10,7 +10,7 @@
             class="py-8 px-15 cursor-pointer"
             v-for="(item, index) in state.items"
             :key="`image-${index}`"
-            @click="selectedCategories = item.value"
+            @click="selectedCategories = [...item.value]"
           >
             <VImg :src="item.image"></VImg>
             <h5 class="mt-4">{{ item.text }}</h5>

@@ -268,7 +268,7 @@ const selectedProducts = computed(() => {
 });
 
 const filterCategory = (category) => {
-  selectedCategories.value = category;
+  selectedCategories.value = [...category];
 };
 
 const submit = () => {};
