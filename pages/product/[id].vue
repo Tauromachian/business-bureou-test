@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-center">
-    <ProductHeader class="my-14 product-header"></ProductHeader>
+    <ProductHeader class="mt-4 product-header"></ProductHeader>
   </div>
   <AppContainer>
     <ProductMainContent></ProductMainContent>
