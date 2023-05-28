@@ -10,7 +10,7 @@
             class="py-8 px-15 cursor-pointer"
             v-for="(item, index) in state.items"
             :key="`image-${index}`"
-            @click="emit('filter:category', item.value)"
+            @click="selectedCategories = item.value"
           >
             <VImg :src="item.image"></VImg>
             <h5 class="mt-4">{{ item.text }}</h5>
@@ -22,7 +22,14 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
+
+const props = defineProps({
+  modelValue: {
+    type: Array,
+    default: () => [],
+  },
+});
 
 const state = reactive({
   items: [
@@ -33,5 +40,14 @@ const state = reactive({
   ],
 });
 
-const emit = defineEmits("filter:category");
+const emit = defineEmits("update:modelValue");
+
+const selectedCategories = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(val) {
+    emit("update:modelValue", val);
+  },
+});
 </script>
