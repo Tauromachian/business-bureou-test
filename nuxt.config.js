@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ["@invictus.codes/nuxt-vuetify"],
+  ssr: false,
   app: {
     head: {
       title: "Jose Garcia | portfolio",
@@ -44,6 +44,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  modules: ["@invictus.codes/nuxt-vuetify"],
 
   vuetify: {
     /* vuetify options */
