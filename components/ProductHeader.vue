@@ -1,9 +1,9 @@
 <template>
   <AppCard class="w-100 text-center py-10">
-    <h1>Blue Blouse</h1>
+    <h1>{{ productStore.product.name }}</h1>
     <div class="d-flex justify-center">
       <VBreadcrumbs
-        :items="['Home', 'For Girls', 'Blue Blouse']"
+        :items="['Home', 'For Girls', productStore.product.name]"
         divider="."
         active-class="active-link"
       ></VBreadcrumbs>
@@ -11,7 +11,10 @@
   </AppCard>
 </template>
 
-<script setup></script>
+<script setup>
+import { useProductStore } from "@/stores/product";
+const productStore = useProductStore();
+</script>
 
 <style lang="scss" scoped>
 h1 {
