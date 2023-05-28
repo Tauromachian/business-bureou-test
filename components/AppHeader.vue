@@ -4,7 +4,7 @@
       <slot></slot>
     </h2>
     <span v-if="active" class="d-flex justify-center w-25">
-      <VImg src="/separator.png"></VImg>
+      <img class="img-header" src="/separator.png" />
     </span>
   </div>
 </template>
@@ -21,5 +21,16 @@ defineProps({
 <style lang="scss" scoped>
 div {
   width: fit-content;
+}
+
+span {
+  height: 16px;
+}
+
+.img-header {
+  img {
+    height: fit-content !important;
+    width: auto;
+  }
 }
 </style>
