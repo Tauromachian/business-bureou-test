@@ -29,8 +29,8 @@ export default {
     },
 
     icon: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: "",
     },
 
     color: {
