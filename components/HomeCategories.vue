@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-center">
-    <VCard flat variant="outlined" class="w-100 border-dot rounded-0">
-      <VCardText class="d-flex mx-8 justify-center text-center">
+    <AppCard flat variant="outlined" class="w-100 border-dot rounded-0">
+      <div class="d-flex mx-8 justify-center text-center">
         <VRow>
           <VCol
             cols="12"
@@ -15,8 +15,8 @@
             <h5 class="mt-4">{{ item.text }}</h5>
           </VCol>
         </VRow>
-      </VCardText>
-    </VCard>
+      </div>
+    </AppCard>
   </div>
 </template>
 
