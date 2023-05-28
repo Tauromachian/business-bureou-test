@@ -52,6 +52,9 @@ const state = reactive({
   font-family: var(--primary-font-family);
 }
 
+a {
+  text-decoration: none;
+}
 .w-fit {
   width: fit-content;
 }
