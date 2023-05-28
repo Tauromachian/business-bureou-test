@@ -50,7 +50,7 @@
           <table class="w-100 text-left pa-4 dotted-table">
             <tr>
               <th class="text-accent2">SKU:</th>
-              <td>Data 1</td>
+              <td>{{ getRandomString() }}</td>
             </tr>
             <tr>
               <th class="text-accent2">Category:</th>
@@ -68,6 +68,8 @@
 </template>
 
 <script setup>
+import { getRandomString } from "@/utils/randomGenerators";
+
 import { useProductStore } from "@/stores/product";
 const productStore = useProductStore();
 
