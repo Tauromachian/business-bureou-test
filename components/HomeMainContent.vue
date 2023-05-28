@@ -250,7 +250,7 @@ const state = reactive({
 
 const selectedCategories = computed({
   get() {
-    return this.modelValue;
+    return props.modelValue;
   },
   set(val) {
     emit("update:modelValue", val);
