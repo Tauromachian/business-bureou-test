@@ -1,6 +1,6 @@
 <template>
   <AppSection>
-    <div class="d-flex justify-center gap-13">
+    <div class="d-flex justify-center gap-13 mb-6">
       <AppHeader
         class="tab-header"
         @click="activeTab = 'description'"
