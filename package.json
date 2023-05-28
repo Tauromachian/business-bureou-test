@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@jogarcia/mgrid": "^0.1.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@pinia/nuxt": "^0.4.11",
     "pinia": "^2.1.3"
   }
