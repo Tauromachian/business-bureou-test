@@ -20,7 +20,7 @@
           <h2 class="mb-0">Categories</h2>
           <AppCard class="w-100">
             <AppCardBody>
-              <table class="w-100 text-left">
+              <table class="w-100 text-left dotted-table">
                 <tr
                   v-for="(category, index) in state.categories"
                   :key="`home-category-${index}`"
@@ -240,20 +240,5 @@ h3 {
 
 .category {
   color: rgb(var(--v-theme-accent));
-}
-
-table {
-  border-spacing: 0;
-}
-
-tr {
-  border-spacing: 0;
-}
-
-th,
-td {
-  border-bottom: 2px solid rgb(223, 222, 222);
-  margin-top: 20px;
-  height: 40px;
 }
 </style>

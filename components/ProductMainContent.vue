@@ -44,7 +44,7 @@
         </p>
 
         <AppCard class="w-100">
-          <table class="w-100 text-left pa-4">
+          <table class="w-100 text-left pa-4 dotted-table">
             <tr>
               <th class="text-accent2">SKU:</th>
               <td>Data 1</td>
@@ -87,21 +87,6 @@ const changeShowcasedImage = (newImage) => {
 <style lang="scss" scoped>
 .showCasedImage {
   cursor: pointer;
-}
-
-table {
-  border-spacing: 0;
-}
-
-tr {
-  border-spacing: 0;
-}
-
-th,
-td {
-  border-bottom: 2px solid rgb(223, 222, 222);
-  margin-top: 20px;
-  height: 40px;
 }
 
 .text-container {
