@@ -5,7 +5,7 @@
         <div class="image-content">
           <h1>Jumpsuits</h1>
           <p class="mb-6">Comfortable clothes for your little baby</p>
-          <BaseButton>Discover</BaseButton>
+          <BaseButton text-color="accent2">Discover</BaseButton>
         </div>
       </VImg>
       <div class="col-span-2 text-center secondary-section">
