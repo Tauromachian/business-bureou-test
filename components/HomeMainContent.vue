@@ -3,7 +3,7 @@
     <div class="d-flex justify-center mb-9">
       <AppHeader> New arrivals </AppHeader>
     </div>
-    <v-row>
+    <VRow>
       <!-- Sidebar -->
       <VCol cols="3" class="d-flex flex-column gap-9">
         <div>
@@ -38,8 +38,8 @@
           <h2 class="mb-0">Best Sellers</h2>
           <AppCard class="mt-0 border-dot w-100" variant="outlined" flat>
             <AppCardBody>
-              <v-list class="d-flex flex-column gap-6">
-                <v-list-item
+              <VList class="d-flex flex-column gap-6">
+                <VListItem
                   v-for="(bestSeller, index) in state.bestSellers"
                   :key="index"
                   class="px-0"
@@ -63,8 +63,8 @@
                       {{ bestSeller.price }}
                     </h5>
                   </VListItemTitle>
-                </v-list-item>
-              </v-list>
+                </VListItem>
+              </VList>
             </AppCardBody>
           </AppCard>
         </div>
@@ -126,7 +126,7 @@
           </VCol>
         </VRow>
       </VCol>
-    </v-row>
+    </VRow>
   </AppSection>
 </template>
 
