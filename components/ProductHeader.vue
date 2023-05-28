@@ -1,14 +1,16 @@
 <template>
-  <div class="text-center my-14 border-dot w-100">
-    <h1>Blue Blouse</h1>
-    <div class="d-flex justify-center">
-      <VBreadcrumbs
-        :items="['Home', 'For Girls', 'Blue Blouse']"
-        divider="."
-        active-class="active-link"
-      ></VBreadcrumbs>
+  <AppCard class="w-100">
+    <div class="text-center">
+      <h1>Blue Blouse</h1>
+      <div class="d-flex justify-center">
+        <VBreadcrumbs
+          :items="['Home', 'For Girls', 'Blue Blouse']"
+          divider="."
+          active-class="active-link"
+        ></VBreadcrumbs>
+      </div>
     </div>
-  </div>
+  </AppCard>
 </template>
 
 <script setup></script>
