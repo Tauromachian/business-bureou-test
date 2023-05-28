@@ -40,7 +40,7 @@
 
         <p class="mb-12">
           Product added!
-          <span class="text-accent2"> Browser Whishlist </span>
+          <span class="text-accent2"> Browse Whishlist </span>
         </p>
 
         <AppCard class="w-100">
