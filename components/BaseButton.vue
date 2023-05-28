@@ -95,11 +95,11 @@ export default {
 
 .base-button__inside-border {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  width: calc(100% - 4px);
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  width: calc(100% - 6px);
 }
 .base-button__overlay {
   position: absolute;
