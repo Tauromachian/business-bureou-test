@@ -133,6 +133,13 @@
 <script setup>
 import { reactive } from "vue";
 
+defineProps({
+  selectedCategories: {
+    type: Array,
+    default: () => [],
+  },
+});
+
 const state = reactive({
   search: "",
   email: "",
