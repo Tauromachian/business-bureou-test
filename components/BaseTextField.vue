@@ -2,7 +2,7 @@
   <div
     class="w-100 floating-label"
     :class="{
-      'border-dotted': variant === 'dotted',
+      'border-dot': variant === 'dotted',
       'border-dashed': variant === 'dashed',
     }"
   >

@@ -9,7 +9,7 @@
     v-bind="$attrs"
     :style="buttonStyles"
   >
-    <span class="border-dashed base-button__inside-border"></span>
+    <span class="border-dash base-button__inside-border"></span>
     <span class="base-button__overlay"></span>
     <span class="base-button__content">
       <VIcon v-if="icon" :icon="icon"></VIcon>

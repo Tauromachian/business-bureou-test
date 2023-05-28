@@ -43,7 +43,7 @@
           <span class="text-accent2"> Browser Whishlist </span>
         </p>
 
-        <table class="w-100 border-dotted text-left pa-4">
+        <table class="w-100 border-dot text-left pa-4">
           <tr>
             <th class="text-accent2">SKU:</th>
             <td>Data 1</td>

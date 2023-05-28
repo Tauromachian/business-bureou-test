@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center my-14 border-dotted w-100">
+  <div class="text-center my-14 border-dot w-100">
     <h1>Blue Blouse</h1>
     <div class="d-flex justify-center">
       <VBreadcrumbs

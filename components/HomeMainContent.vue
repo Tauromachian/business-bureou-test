@@ -18,7 +18,7 @@
         <!-- Categories -->
         <div>
           <h2 class="mb-0">Categories</h2>
-          <table class="w-100 border-dotted text-left pa-4">
+          <table class="w-100 border-dot text-left pa-4">
             <tr
               v-for="(category, index) in state.categories"
               :key="`home-category-${index}`"
@@ -32,8 +32,8 @@
         <!-- Best Sellers -->
         <div>
           <h2 class="mb-0">Best Sellers</h2>
-          <VCard class="mt-0 border-dotted w-100" variant="outlined" flat>
-            <VCardText>
+          <AppCard class="mt-0 border-dot w-100" variant="outlined" flat>
+            <AppCardBody>
               <v-list class="d-flex flex-column gap-6">
                 <v-list-item
                   v-for="(bestSeller, index) in state.bestSellers"
@@ -61,8 +61,8 @@
                   </VListItemTitle>
                 </v-list-item>
               </v-list>
-            </VCardText>
-          </VCard>
+            </AppCardBody>
+          </AppCard>
         </div>
 
         <!-- Opt In Form -->
