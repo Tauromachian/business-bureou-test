@@ -5,7 +5,7 @@
     </div>
     <VRow>
       <VCol md="3" v-for="(product, index) in state.products" :key="index">
-        <VCard flat class="mb-4 mx-1 text-center">
+        <VCard flat class="mb-4 mx-1 text-center rounded-0">
           <VImg :src="product.image" aspect-ratio="1"></VImg>
           <VCardSubtitle class="mt-4">
             <h4 class="category text-accent">
