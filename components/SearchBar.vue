@@ -1,11 +1,13 @@
 <template>
-  <div class="d-flex">
+  <VForm @submit.prevent="emit('submit')" class="d-flex">
     <BaseTextField label="Search products..." class="base-text"></BaseTextField>
-    <BaseButton icon="mdi-magnify" color="accent"></BaseButton>
-  </div>
+    <BaseButton type="submit" icon="mdi-magnify" color="accent"></BaseButton>
+  </VForm>
 </template>
 
-<script setup></script>
+<script setup>
+const emit = defineEmits(["submit"]);
+</script>
 
 <style lang="scss" scoped>
 .base-text {
