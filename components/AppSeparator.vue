@@ -16,7 +16,7 @@ defineProps({
 <style lang="scss" scoped>
 span {
   height: 12px;
-  width: 60%;
+  width: 50%;
 }
 
 img {
