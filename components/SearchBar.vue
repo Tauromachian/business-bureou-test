@@ -1,12 +1,33 @@
 <template>
   <VForm @submit.prevent="emit('submit')" class="d-flex">
-    <BaseTextField label="Search products..." class="base-text"></BaseTextField>
+    <BaseTextField
+      label="Search products..."
+      class="base-text"
+      v-model="search"
+    ></BaseTextField>
     <BaseButton type="submit" icon="mdi-magnify" color="accent"></BaseButton>
   </VForm>
 </template>
 
 <script setup>
-const emit = defineEmits(["submit"]);
+import { computed } from "vue";
+
+const props = defineProps({
+  modelValue: {
+    type: String,
+    default: "",
+  },
+});
+const emit = defineEmits(["submit", "update:modelValue"]);
+
+const search = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(value) {
+    emit("update:modelValue", value);
+  },
+});
 </script>
 
 <style lang="scss" scoped>

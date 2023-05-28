@@ -12,13 +12,16 @@
       id="name"
       name="name"
       placeholder=" "
+      v-model="text"
     />
     <label for="name">{{ label }}</label>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from "vue";
+
+const props = defineProps({
   label: {
     type: String,
     default: "",
@@ -26,6 +29,21 @@ defineProps({
   variant: {
     type: String,
     default: "dotted",
+  },
+  modelValue: {
+    type: String,
+    default: "",
+  },
+});
+
+const emit = defineEmits(["update:modelValue"]);
+
+const text = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(val) {
+    emit("update:modelValue", val);
   },
 });
 </script>
