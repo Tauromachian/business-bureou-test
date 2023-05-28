@@ -43,20 +43,22 @@
           <span class="text-accent2"> Browser Whishlist </span>
         </p>
 
-        <table class="w-100 border-dot text-left pa-4">
-          <tr>
-            <th class="text-accent2">SKU:</th>
-            <td>Data 1</td>
-          </tr>
-          <tr>
-            <th class="text-accent2">Category:</th>
-            <td>Data 2</td>
-          </tr>
-          <tr>
-            <th class="text-accent2">Tags:</th>
-            <td>Data 3</td>
-          </tr>
-        </table>
+        <AppCard class="w-100">
+          <table class="w-100 text-left pa-4">
+            <tr>
+              <th class="text-accent2">SKU:</th>
+              <td>Data 1</td>
+            </tr>
+            <tr>
+              <th class="text-accent2">Category:</th>
+              <td>Data 2</td>
+            </tr>
+            <tr>
+              <th class="text-accent2">Tags:</th>
+              <td>Data 3</td>
+            </tr>
+          </table>
+        </AppCard>
       </VCol>
     </VRow>
   </AppSection>
