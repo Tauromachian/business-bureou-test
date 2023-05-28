@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     head: {
-      title: "Jose Garcia | portfolio",
+      title: "Kids R Us",
       htmlAttrs: {
         lang: "en",
       },
