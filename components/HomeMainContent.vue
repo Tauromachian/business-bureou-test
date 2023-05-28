@@ -258,10 +258,10 @@ const selectedCategories = computed({
 });
 
 const selectedProducts = computed(() => {
-  if (!selectedCategories.length) return state.products;
+  if (!selectedCategories.value.length) return state.products;
 
   return state.products.filter((product) => {
-    if (selectedCategories.includes(product.category)) return product;
+    if (selectedCategories.value.includes(product.category)) return product;
   });
 });
 
