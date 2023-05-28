@@ -83,7 +83,13 @@
                 label="Your email address*"
               >
               </BaseTextField>
-              <BaseButton color="#ffffff" class="w-100" block @click="submit">
+              <BaseButton
+                text-color="accent2"
+                color="#ffffff"
+                class="w-100"
+                block
+                @click="submit"
+              >
                 Submit
               </BaseButton>
             </VForm>
