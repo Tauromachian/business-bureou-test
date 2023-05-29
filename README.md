@@ -9,7 +9,7 @@ Primero instalar las dependencias con yarn:
 yarn install
 ```
 
-## Development Server
+## Servidor de desarrollo
 
 Correr el servidor de dessarrollo con:
 
