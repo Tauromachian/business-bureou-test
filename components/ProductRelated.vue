@@ -39,14 +39,15 @@ import { computed } from "vue";
 import { products } from "@/utils/data";
 
 import { useProductStore } from "@/stores/product";
-
 const productStore = useProductStore();
 
+const savedProduct = productStore.product;
+
 const relatedProducts = computed(() => {
-  if (!productStore.product.relatedCategory) return products.splice(0, 4);
+  if (!savedProduct.category) return products.splice(0, 4);
 
   return products.filter((product) => {
-    return product.category === productStore.product.relatedCategory;
+    return savedProduct.category === product.category;
   });
 });
 </script>
