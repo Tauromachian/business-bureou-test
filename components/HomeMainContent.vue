@@ -46,6 +46,7 @@
                   :key="index"
                   class="px-0"
                   :prepend-avatar="bestSeller.image"
+                  @click="selectProduct(bestSeller)"
                 >
                   <VListItemTitle>
                     <h5>
