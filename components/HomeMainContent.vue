@@ -42,7 +42,7 @@
             <AppCardBody>
               <VList class="d-flex flex-column gap-6">
                 <VListItem
-                  v-for="(bestSeller, index) in state.bestSellers"
+                  v-for="(bestSeller, index) in bestSellers"
                   :key="index"
                   class="px-0"
                   :prepend-avatar="bestSeller.image"
@@ -54,7 +54,7 @@
                   </VListItemTitle>
                   <VListItemTitle>
                     <VRating
-                      v-model="bestSeller.stars"
+                      v-model="bestSeller.rating"
                       color="accent"
                       density="compact"
                       readonly
@@ -163,32 +163,6 @@ const state = reactive({
     { name: "For Home", value: "home", amount: 14 },
     { name: "For Play", value: "toys", amount: 8 },
   ],
-  bestSellers: [
-    {
-      name: "Bunny backpack",
-      stars: 4,
-      price: "$10",
-      image: "/for-home-2-580x870.jpg",
-    },
-    {
-      name: "Rabbit pillow",
-      stars: 4,
-      price: "$10",
-      image: "/for-home-13-1-580x870.jpg",
-    },
-    {
-      name: "Bear pillow",
-      stars: 4,
-      price: "$70",
-      image: "/for-home-14-580x870.jpg",
-    },
-    {
-      name: "Rabbit Casket",
-      stars: 4,
-      price: "$100",
-      image: "/for-home-15-580x870.jpg",
-    },
-  ],
   products,
 });
 
@@ -199,6 +173,10 @@ const selectedCategories = computed({
   set(val) {
     emit("update:modelValue", val);
   },
+});
+
+const bestSellers = computed(() => {
+  return products.splice(0, 4);
 });
 
 const selectedProducts = computed(() => {
