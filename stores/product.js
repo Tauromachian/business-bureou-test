@@ -8,7 +8,7 @@ export const useProductStore = defineStore({
   }),
   actions: {
     setProduct(product) {
-      this.product = product;
+      this.product = { ...product };
     },
   },
   persist: true,
