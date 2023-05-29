@@ -38,18 +38,15 @@
 import { computed } from "vue";
 import { products } from "@/utils/data";
 
-const props = defineProps({
-  relatedCategory: {
-    type: String,
-    default: "",
-  },
-});
+import { useProductStore } from "@/stores/product";
+
+const productStore = useProductStore();
 
 const relatedProducts = computed(() => {
-  if (!props.relatedCategory) return products.splice(0, 4);
+  if (!productStore.product.relatedCategory) return products.splice(0, 4);
 
   return products.filter((product) => {
-    return product.category === props.relatedCategory;
+    return product.category === productStore.product.relatedCategory;
   });
 });
 </script>
