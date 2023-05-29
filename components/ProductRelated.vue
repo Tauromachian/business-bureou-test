@@ -35,7 +35,21 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
+import { products } from "@/utils/data";
+
+const props = defineProps({
+  relatedCategory: {
+    type: String,
+    default: "",
+  },
+});
+
+const relatedProducts = computed(() => {
+  return products.filter((product) => {
+    return product.category === relatedCategory;
+  });
+});
 
 const state = reactive({
   search: "",
