@@ -51,9 +51,11 @@ const savedProduct = productStore.product;
 const relatedProducts = computed(() => {
   if (!savedProduct.category) return products.splice(0, 4);
 
-  return products.filter((product) => {
-    return savedProduct.category === product.category;
-  });
+  return products
+    .filter((product) => {
+      return savedProduct.category === product.category;
+    })
+    .splice(0, 4);
 });
 </script>
 
