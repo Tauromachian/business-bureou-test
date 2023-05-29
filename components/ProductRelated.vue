@@ -4,7 +4,12 @@
       <AppHeader> Related products </AppHeader>
     </div>
     <VRow>
-      <VCol md="3" v-for="(product, index) in relatedProducts" :key="index">
+      <VCol
+        cols="12"
+        md="3"
+        v-for="(product, index) in relatedProducts"
+        :key="index"
+      >
         <VCard flat class="mb-4 mx-1 text-center rounded-0">
           <VImg :src="product.image" aspect-ratio="1"></VImg>
           <VCardSubtitle class="mt-4">
