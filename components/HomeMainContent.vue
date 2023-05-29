@@ -10,7 +10,6 @@
           <SearchBar
             v-model="state.search"
             label="Search"
-            class="mb-n4"
             @submit="applySearch"
             solo
           ></SearchBar>
