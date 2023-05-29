@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { reactive, computed } from "vue";
+import { computed } from "vue";
 import { products } from "@/utils/data";
 
 const props = defineProps({
