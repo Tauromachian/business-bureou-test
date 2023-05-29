@@ -6,11 +6,26 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+
 defineProps({
   src: {
     type: String,
     default: "",
   },
+});
+
+onMounted(() => {
+  const zoomImage = document.querySelector(".zoom-image");
+  const zoomedImage = document.querySelector(".zoomed-image");
+
+  zoomImage.addEventListener("mouseover", () => {
+    zoomedImage.style.visibility = "visible";
+  });
+
+  zoomImage.addEventListener("mouseout", () => {
+    zoomedImage.style.visibility = "hidden";
+  });
 });
 </script>
 
