@@ -18,7 +18,7 @@
 
         <!-- Categories -->
         <div>
-          <h2 class="mb-0">Categories</h2>
+          <h2 class="mb-3">Categories</h2>
           <AppCard class="w-100">
             <AppCardBody>
               <table class="w-100 text-left dotted-table">
@@ -38,7 +38,7 @@
 
         <!-- Best Sellers -->
         <div>
-          <h2 class="mb-0">Best Sellers</h2>
+          <h2 class="mb-3">Best Sellers</h2>
           <AppCard class="mt-0 border-dot w-100" variant="outlined" flat>
             <AppCardBody>
               <VList class="d-flex flex-column gap-6">
@@ -272,6 +272,8 @@ const selectedProducts = computed(() => {
   const selectedProducts = state.products.filter((product) => {
     if (selectedCategories.value.includes(product.category)) return product;
   });
+
+  console.log("asdf");
 
   if (state.isSearchActive) {
     return selectedProducts.filter((product) => {
