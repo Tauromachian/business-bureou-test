@@ -107,28 +107,11 @@
             v-for="(product, index) in selectedProducts"
             :key="index"
           >
-            <VCard
+            <ProductCard
+              :product="product"
               @click="selectProduct(product)"
-              flat
-              class="mb-4 rounded-0 text-center"
-            >
-              <VImg :src="product.image" aspect-ratio="1"></VImg>
-              <VCardSubtitle class="mt-4">
-                <h4 class="category">
-                  {{ product.categoryText }}
-                </h4>
-              </VCardSubtitle>
-              <VCardTitle
-                ><h3>
-                  {{ product.name }}
-                </h3>
-              </VCardTitle>
-              <VCardText>
-                <h4>
-                  {{ product.price }}
-                </h4>
-              </VCardText>
-            </VCard>
+              class="mb-4"
+            ></ProductCard>
           </VCol>
         </VRow>
       </VCol>

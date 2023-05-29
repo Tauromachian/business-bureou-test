@@ -10,30 +10,12 @@
         v-for="(product, index) in relatedProducts"
         :key="index"
       >
-        <VCard flat class="mb-4 mx-1 text-center rounded-0">
-          <VImg :src="product.image" aspect-ratio="1"></VImg>
-          <VCardSubtitle class="mt-4">
-            <h4 class="category text-accent">
-              {{ product.category }}
-            </h4>
-          </VCardSubtitle>
-          <VCardTitle
-            ><h3>
-              {{ product.name }}
-            </h3>
-          </VCardTitle>
-          <VCardText>
-            <h4>
-              {{ product.price }}
-            </h4>
-          </VCardText>
-          <VRating
-            :model-value="product.rating"
-            density="compact"
-            color="accent"
-            readonly
-          ></VRating>
-        </VCard>
+        <ProductCard
+          :product="product"
+          @click="selectProduct(product)"
+          class="mb-4"
+          show-rating
+        ></ProductCard>
       </VCol>
     </VRow>
   </AppSection>
@@ -57,6 +39,10 @@ const relatedProducts = computed(() => {
     })
     .splice(0, 4);
 });
+
+const selectProduct = (product) => {
+  productStore.setProduct(product);
+};
 </script>
 
 <style lang="scss" scoped>
