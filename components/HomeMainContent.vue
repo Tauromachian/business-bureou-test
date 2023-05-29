@@ -193,7 +193,7 @@ const filterCategory = (category) => {
 
 const selectProduct = (product) => {
   productStore.setProduct(product);
-  router.push(`product/1`);
+  router.push(`product/${product.id}`);
 };
 
 const applySearch = () => {
