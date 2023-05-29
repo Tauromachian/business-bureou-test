@@ -42,9 +42,11 @@ onMounted(() => {
 
 .zoomed-image {
   position: absolute;
-  left: 220px;
-  top: 0;
-  width: 400px;
+  pointer-events: none;
+  z-index: 200;
+  left: 280px;
+  top: -200px;
+  width: 300px;
   transform: scale(2);
   transform-origin: 0 0;
   visibility: hidden;
