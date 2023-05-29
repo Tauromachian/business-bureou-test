@@ -24,9 +24,11 @@
 <script setup>
 import { computed } from "vue";
 import { products } from "@/utils/data";
+import { useRouter } from "vue-router";
 
 import { useProductStore } from "@/stores/product";
 const productStore = useProductStore();
+const router = useRouter();
 
 const savedProduct = productStore.product;
 
@@ -42,6 +44,7 @@ const relatedProducts = computed(() => {
 
 const selectProduct = (product) => {
   productStore.setProduct(product);
+  router.push(`/product/${product.id}`);
 };
 </script>
 
