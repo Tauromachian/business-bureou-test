@@ -1,7 +1,10 @@
 import { reactive } from "vue";
 
+import { getRandomString } from "@/utils/randomGenerators";
+
 export const products = reactive([
   {
+    id: getRandomString(),
     name: "Product 1",
     categoryText: "For Boys",
     category: "boys",
@@ -11,6 +14,7 @@ export const products = reactive([
     relatedImages: ["/boys-8-1-580x870.jpg", "/boys-8-580x870(1).jpg"],
   },
   {
+    id: getRandomString(),
     name: "Product 2",
     categoryText: "For Boys",
     category: "boys",
@@ -19,6 +23,7 @@ export const products = reactive([
     image: "/boys-8-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 3",
     categoryText: "For Home",
     category: "home",
@@ -27,6 +32,7 @@ export const products = reactive([
     image: "/for-home-5-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 4",
     categoryText: "For Home",
     category: "home",
@@ -35,6 +41,7 @@ export const products = reactive([
     image: "/for-home-5-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 5",
     categoryText: "For Home",
     category: "home",
@@ -43,6 +50,7 @@ export const products = reactive([
     image: "/for-home-5-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 6",
     categoryText: "For Girls",
     category: "girls",
@@ -51,6 +59,7 @@ export const products = reactive([
     image: "/girls-1-2-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 7",
     categoryText: "For Girls",
     category: "girls",
@@ -59,6 +68,7 @@ export const products = reactive([
     image: "/girls-2-2-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 8",
     categoryText: "For Girls",
     category: "girls",
@@ -67,6 +77,7 @@ export const products = reactive([
     image: "/girls-6-1-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Product 9",
     categoryText: "For Girls",
     category: "girls",
@@ -75,6 +86,7 @@ export const products = reactive([
     image: "/girls-8-1-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Bunny backpack",
     categoryText: "Toys",
     category: "toys",
@@ -83,6 +95,7 @@ export const products = reactive([
     image: "/for-home-2-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Rabbit pillow",
     categoryText: "Toys",
     category: "toys",
@@ -91,6 +104,7 @@ export const products = reactive([
     image: "/for-home-13-1-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Bear pillow",
     categoryText: "Toys",
     category: "toys",
@@ -99,6 +113,7 @@ export const products = reactive([
     image: "/for-home-14-580x870.jpg",
   },
   {
+    id: getRandomString(),
     name: "Rabbit Casket",
     categoryText: "Toys",
     category: "toys",
