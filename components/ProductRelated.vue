@@ -4,7 +4,7 @@
       <AppHeader> Related products </AppHeader>
     </div>
     <VRow>
-      <VCol md="3" v-for="(product, index) in state.products" :key="index">
+      <VCol md="3" v-for="(product, index) in relatedProducts" :key="index">
         <VCard flat class="mb-4 mx-1 text-center rounded-0">
           <VImg :src="product.image" aspect-ratio="1"></VImg>
           <VCardSubtitle class="mt-4">
@@ -46,8 +46,10 @@ const props = defineProps({
 });
 
 const relatedProducts = computed(() => {
+  if (!props.relatedCategory) return products.splice(0, 4);
+
   return products.filter((product) => {
-    return product.category === relatedCategory;
+    return product.category === props.relatedCategory;
   });
 });
 </script>
