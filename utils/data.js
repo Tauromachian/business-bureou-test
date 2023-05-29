@@ -1,4 +1,6 @@
-export const products = [
+import { reactive } from "vue";
+
+export const products = reactive([
   {
     name: "Product 1",
     categoryText: "For Boys",
@@ -72,4 +74,4 @@ export const products = [
     price: "$90",
     image: "/girls-8-1-580x870.jpg",
   },
-];
+]);
