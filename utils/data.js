@@ -2,7 +2,7 @@ import { reactive } from "vue";
 
 import { getRandomString } from "@/utils/randomGenerators";
 
-export const products = reactive([
+export const rawProducts = [
   {
     id: getRandomString(),
     name: "Product 1",
@@ -121,4 +121,5 @@ export const products = reactive([
     price: "$100",
     image: "/for-home-15-580x870.jpg",
   },
-]);
+];
+export const products = reactive(rawProducts);
