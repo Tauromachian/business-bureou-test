@@ -21,7 +21,7 @@
       <VCol cols="12" md="7" class="pl-10 mt-4">
         <h4>{{ product.price }}</h4>
         <VRating
-          :model-value="5"
+          :model-value="product.rating"
           color="accent"
           density="compact"
           readonly
