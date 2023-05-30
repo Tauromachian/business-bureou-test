@@ -4,7 +4,7 @@
     <div class="d-flex justify-center">
       <VBreadcrumbs
         :items="['Home', product.categoryText, product.name]"
-        divider="."
+        divider=":"
         active-class="active-link"
       ></VBreadcrumbs>
     </div>
