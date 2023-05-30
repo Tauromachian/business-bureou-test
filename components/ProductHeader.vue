@@ -6,6 +6,8 @@
         :items="items"
         divider=":"
         active-class="active-link"
+        class="breadcrumbs"
+        color="accent2"
       ></VBreadcrumbs>
     </div>
   </AppCard>
@@ -35,5 +37,9 @@ h1 {
 
 .active-link {
   background-color: rgb(var(--v-theme-accent));
+}
+
+.breadcrumbs {
+  font-family: var(--primary-font-family);
 }
 </style>
