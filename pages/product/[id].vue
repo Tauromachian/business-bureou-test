@@ -9,7 +9,26 @@
   </AppContainer>
 </template>
 
-<script setup></script>
+<script setup>
+import { onBeforeMount } from "vue";
+import { useRoute } from "vue-router";
+import { useProductStore } from "@/stores/product";
+
+const route = useRoute();
+const productStore = useProductStore();
+
+onBeforeMount(() => {
+  const keys = Object.keys(productStore.product);
+  if (keys.length) return;
+
+  loadData();
+});
+
+const loadData = async () => {
+  const product = (await getProducts(route.params.id)).data;
+  productStore.setProduct(product);
+};
+</script>
 
 <style lang="scss" scoped>
 .product-header {
