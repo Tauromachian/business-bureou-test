@@ -1,4 +1,4 @@
-import { Server } from "miragejs";
+import { Server, Response } from "miragejs";
 
 import { rawProducts } from "@/utils/data";
 
