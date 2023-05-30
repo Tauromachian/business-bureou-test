@@ -22,9 +22,9 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { products } from "@/utils/data";
+import { computed, onBeforeMount, reactive } from "vue";
 import { useRouter } from "vue-router";
+import { getProductsByCategory } from "@/services/product";
 
 import { useProductStore } from "@/stores/product";
 const productStore = useProductStore();
@@ -32,15 +32,27 @@ const router = useRouter();
 
 const savedProduct = productStore.product;
 
-const relatedProducts = computed(() => {
-  if (!savedProduct.category) return products.splice(0, 4);
+const state = reactive({
+  products: [],
+});
 
-  return products
+const relatedProducts = computed(() => {
+  if (!savedProduct.category) return state.products.splice(0, 4);
+
+  return state.products
     .filter((product) => {
       return savedProduct.category === product.category;
     })
     .splice(0, 4);
 });
+
+onBeforeMount(() => {
+  loadData();
+});
+
+const loadData = async () => {
+  state.products = (await getProductsByCategory(savedProduct.category)).data;
+};
 
 const selectProduct = (product) => {
   productStore.setProduct(product);
