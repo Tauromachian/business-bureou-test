@@ -6,5 +6,6 @@
       <NuxtPage></NuxtPage>
     </VMain>
     <TheFooter></TheFooter>
+    <CookiesWarning></CookiesWarning>
   </VApp>
 </template>
