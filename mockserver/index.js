@@ -8,7 +8,7 @@ export function makeServer({ environment = "development" } = {}) {
 
     routes() {
       this.get("/products", () => {
-        return new Response(200, {}, rawProducts);
+        return new Response(200, {}, [...rawProducts]);
       });
 
       this.get("/products/:id", (_, request) => {
