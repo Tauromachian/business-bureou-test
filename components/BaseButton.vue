@@ -8,7 +8,10 @@
     v-bind="$attrs"
     :style="buttonStyles"
   >
-    <span class="border-dash base-button__inside-border"></span>
+    <span
+      v-if="!hideInsideBorder"
+      class="border-dash base-button__inside-border"
+    ></span>
     <span class="base-button__overlay"></span>
     <span class="base-button__content">
       <VIcon v-if="icon" :icon="icon"></VIcon>
@@ -41,6 +44,11 @@ export default {
     textColor: {
       type: String,
       default: "",
+    },
+
+    hideInsideBorder: {
+      type: Boolean,
+      default: true,
     },
 
     size: {
