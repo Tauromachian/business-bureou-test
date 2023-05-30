@@ -170,8 +170,6 @@ const selectedProducts = computed(() => {
     if (selectedCategories.value.includes(product.category)) return product;
   });
 
-  console.log("asdf");
-
   if (state.isSearchActive) {
     return selectedProducts.filter((product) => {
       if (
