@@ -18,7 +18,7 @@ export function makeServer({ environment = "development" } = {}) {
         return new Response(200, {}, product);
       });
 
-      this.get("products/:category", () => {
+      this.get("/products/category/:category", (_, request) => {
         const product = rawProducts.filter(
           (product) => product.category === request.params.category
         );
