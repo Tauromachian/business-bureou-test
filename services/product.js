@@ -7,3 +7,7 @@ export async function getProducts() {
 export async function getProduct(id) {
   return await axios.get(`/products/${id}`);
 }
+
+export async function getProductsByCategory(category) {
+  return await axios.get(`/products/${category}`);
+}
