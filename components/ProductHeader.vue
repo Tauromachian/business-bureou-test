@@ -38,8 +38,4 @@ h1 {
 .active-link {
   background-color: rgb(var(--v-theme-accent));
 }
-
-.breadcrumbs {
-  font-family: var(--primary-font-family);
-}
 </style>
