@@ -18,7 +18,12 @@
           </VCol>
         </VRow>
       </VCol>
-      <VCol cols="12" md="7" class="pl-10 mt-4">
+      <VCol
+        cols="12"
+        md="7"
+        class="mt-4"
+        :class="{ 'pl-10': $vuetify.display.mdAndUp }"
+      >
         <h4>{{ product.price }}</h4>
         <VRating
           :model-value="product.rating"

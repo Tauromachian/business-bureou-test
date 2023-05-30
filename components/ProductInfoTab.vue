@@ -1,6 +1,6 @@
 <template>
   <AppSection>
-    <div class="d-flex justify-center gap-13 mb-6">
+    <div class="d-flex justify-center gap-13 mb-6 tabs">
       <AppHeader
         class="tab-header"
         @click="activeTab = 'description'"
@@ -79,6 +79,10 @@ const activeTab = ref(null);
 </script>
 
 <style lang="scss" scoped>
+.tabs {
+  overflow-x: auto;
+}
+
 .tab-header {
   cursor: pointer;
 }

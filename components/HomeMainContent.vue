@@ -5,7 +5,7 @@
     </div>
     <VRow>
       <!-- Sidebar -->
-      <VCol cols="3" class="d-flex flex-column gap-9">
+      <VCol cols="12" md="3" class="d-flex flex-column gap-9">
         <div>
           <SearchBar
             v-model="state.search"
@@ -16,7 +16,7 @@
         </div>
 
         <!-- Categories -->
-        <div>
+        <div v-if="$vuetify.display.mdAndUp">
           <h2 class="mb-3">Categories</h2>
           <AppCard class="w-100">
             <AppCardBody>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Best Sellers -->
-        <div>
+        <div v-if="$vuetify.display.mdAndUp">
           <h2 class="mb-3">Best Sellers</h2>
           <AppCard class="mt-0 border-dot w-100" variant="outlined" flat>
             <AppCardBody>
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Opt In Form -->
-        <VCard flat color="accent">
+        <VCard flat color="accent" v-if="$vuetify.display.mdAndUp">
           <VCardText>
             <h2 class="text-h4 mb-4 text-center form-title">
               Join our Newsletter
@@ -100,9 +100,10 @@
       </VCol>
 
       <!-- Content -->
-      <VCol cols="9">
-        <VRow class="ml-4">
+      <VCol cols="12" md="9">
+        <VRow :class="{ 'ml-4': $vuetify.display.mdAndUp }">
           <VCol
+            cols="12"
             md="4"
             v-for="(product, index) in selectedProducts"
             :key="index"

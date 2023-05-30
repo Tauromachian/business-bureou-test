@@ -11,7 +11,7 @@
       hide-inside-border
       @click="hidden = true"
       color="#000000"
-      class="ml-4"
+      class="button"
     >
       Accept
     </BaseButton>
@@ -29,5 +29,23 @@ const hidden = ref(false);
   position: fixed;
   bottom: 0;
   background-color: white;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .cookies-warning {
+    flex-direction: row;
+  }
+}
+
+.button {
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    align-self: unset;
+    margin-left: 0.8em;
+  }
 }
 </style>

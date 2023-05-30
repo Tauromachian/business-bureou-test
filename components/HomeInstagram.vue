@@ -30,6 +30,12 @@ const state = reactive({
 <style lang="scss" scoped>
 .images {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media screen and (min-width: 768px) {
+  .images {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
 </style>
