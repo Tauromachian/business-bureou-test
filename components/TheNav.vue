@@ -1,5 +1,5 @@
 <template>
-  <header class="d-flex flex-column align-center">
+  <nav class="d-flex flex-column align-center">
     <AppLogo class="my-n15"></AppLogo>
     <div class="d-flex gap-6 nav-links align-top" v-once>
       <NuxtLink
@@ -28,7 +28,7 @@
         <VIcon icon="mdi-magnify"></VIcon>
       </NuxtLink>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script setup>
