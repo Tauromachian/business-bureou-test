@@ -120,10 +120,10 @@
 </template>
 
 <script setup>
-import { reactive, computed } from "vue";
+import { reactive, computed, onBeforeMount } from "vue";
 import { useProductStore } from "@/stores/product";
 import { useRouter } from "vue-router";
-import { products } from "@/utils/data";
+import { getProducts } from "@/services/product";
 
 const props = defineProps({
   modelValue: {
@@ -147,7 +147,7 @@ const state = reactive({
     { name: "For Home", value: "home", amount: 14 },
     { name: "For Play", value: "toys", amount: 8 },
   ],
-  products,
+  products: [],
 });
 
 const selectedCategories = computed({
@@ -186,6 +186,14 @@ const selectedProducts = computed(() => {
 
   return selectedProducts;
 });
+
+onBeforeMount(() => {
+  loadData();
+});
+
+const loadData = async () => {
+  state.products = (await getProducts()).data;
+};
 
 const filterCategory = (category) => {
   selectedCategories.value = [...category];
