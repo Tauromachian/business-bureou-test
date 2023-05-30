@@ -48,7 +48,7 @@ export default {
 
     hideInsideBorder: {
       type: Boolean,
-      default: true,
+      default: false,
     },
 
     size: {
